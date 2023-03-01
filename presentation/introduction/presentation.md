@@ -266,7 +266,7 @@ When we look at input sizes large enough to make only the order of growth of the
   * Expresión asintótica, cota superior
   * Cuánto tarda como máximo
 
-* omega: Ω(g(n))
+* Omega: Ω(g(n))
   * Cota asintótica inferior
   * Cuánto tarda como mínimo
 
@@ -315,11 +315,11 @@ creciente, en promedio, el tiempo será proporcional a g.
 
 ![]({{site.baseurl}}/presentation/introduction/theta.jpg)
 
----
+<!-- --- -->
 
-# Propiedades de la notación O-Grande
+<!-- # Propiedades de la notación O-Grande -->
 
-![]({{site.baseurl}}/presentation/introduction/propiedades.jpg)
+<!-- ![]({{site.baseurl}}/presentation/introduction/propiedades.jpg) -->
 
 ---
 
@@ -373,7 +373,19 @@ Utilizar log n para logaritmo en base 2 y ln n para logaritmo neperiano  (cuando
 
 # Familias de Órdenes más interesantes (3)
 
-![]({{site.baseurl}}/presentation/introduction/ordenes.jpg)
+![]({{site.baseurl}}/presentation/introduction/orders_table.png)
+
+---
+
+# Familias de Órdenes más interesantes (4)
+
+![]({{site.baseurl}}/presentation/introduction/orders_graph.jpg)
+
+---
+
+# Implicancias 
+
+![]({{site.baseurl}}/presentation/introduction/practical_implications.png)
 
 ---
 

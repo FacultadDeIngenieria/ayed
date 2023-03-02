@@ -4,10 +4,9 @@ layout: practice
 permalink: /practice/1
 ---
 
-# Práctica 1: Complejidad de Algoritmos
+# Práctica 1 (Opcional): Complejidad de Algoritmos
 
 * Fecha: 2 de Marzo, 2023
-* Fecha de Entrega: 9 de Marzo, 2023
 
 ## Ejercicio 1
 

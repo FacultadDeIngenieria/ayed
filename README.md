@@ -35,4 +35,4 @@
 * Pedro Colunga: [pedro.colunga@ing.austral.edu.ar](mailto:pedro.colunga@ing.austral.edu.ar)
 * Lucas Luppani: [lucas.luppani@ing.austral.edu.ar](mailto:lucas.luppani@ing.austral.edu.ar)
 * Leandro Bauret: [leandro.bauret@ing.austral.edu.ar](mailto:leandro.bauret@ing.austral.edu.ar)
-<!-- * Khalil Stessens: [khalil.stessens@ing.austral.edu.ar](mailto:khalil.stessens@ing.austral.edu.ar) -->
+* Khalil Stessens: [khalil.stessens@ing.austral.edu.ar](mailto:khalil.stessens@ing.austral.edu.ar)

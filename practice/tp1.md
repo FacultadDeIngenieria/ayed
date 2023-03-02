@@ -6,8 +6,8 @@ permalink: /practice/1
 
 # Práctica 1: Complejidad de Algoritmos
 
-* Fecha: 4 de Agosto, 2022
-* Fecha de Entrega: 11 de Agosto, 2022
+* Fecha: 2 de Marzo, 2023
+* Fecha de Entrega: 9 de Marzo, 2023
 
 ## Ejercicio 1
 

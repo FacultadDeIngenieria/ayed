@@ -5,6 +5,7 @@
 ## Presentaciones
 
 1. [Introducción al Análisis de Algoritmos](introduction)
+1. [Caso de estudio: Union-Find](unionfind)
 
 ## Trabajos Prácticos
 

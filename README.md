@@ -6,13 +6,15 @@
 
 1. [Introducción al Análisis de Algoritmos](introduction)
 1. [Caso de estudio: Union-Find](unionfind)
+1. [Stack](stack)
 
 ## Trabajos Prácticos
 
 1. [TP1](practice/1)
 
-<!-- ## Links -->
+## Links
 
+1. [A Tale of Three Trees by Scott Chacon](https://www.infoq.com/presentations/A-Tale-of-Three-Trees/)
 
 <!-- ## Parciales -->
 

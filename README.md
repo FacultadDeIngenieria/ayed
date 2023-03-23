@@ -11,6 +11,7 @@
 ## Trabajos Prácticos
 
 1. [TP1](practice/1)
+1. [TP2](practice/2)
 
 ## Links
 

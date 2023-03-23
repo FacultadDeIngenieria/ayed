@@ -346,7 +346,7 @@ for (Item i : stack)
 ```
 
 * **Q.** How to detect?
-* **A.**
+* **A.** 
   * Count total number of push() and pop() operations in Stack.
   * Save counts in Iterator subclass upon creation.
   * If, when calling next() and hasNext(), the current counts do not equal the saved counts, throw exception.

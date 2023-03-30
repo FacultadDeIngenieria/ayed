@@ -12,6 +12,7 @@
 
 1. [TP1](practice/1)
 1. [TP2](practice/2)
+1. [TP3](practice/3)
 
 ## Links
 
@@ -27,9 +28,9 @@
 
 <!-- 1. [Spreadsheet](https://docs.google.com/spreadsheets/d/1fbBcsMlo_-jrtR63DZ4yoNSHmgeZzuc3L9CcDX2SOSc/edit?usp=sharing) -->
 
-<!-- ## TeamCity -->
+## TeamCity
 
-<!-- - [Link](http://35.85.129.238:443) -->
+[Link](http://35.85.129.238:443)
 
 ## Cátedra
 

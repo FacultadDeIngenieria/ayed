@@ -21,11 +21,11 @@
 
 1. [A Tale of Three Trees by Scott Chacon](https://www.infoq.com/presentations/A-Tale-of-Three-Trees/)
 
-<!-- ## Parciales -->
+## Parciales
 
 <!-- 1. [Examen Nivelador](https://forms.gle/C69Vex6gG9Hch7XG8)  -->
-<!-- 2. Primer parcial: 22 de septiembre de 2022 -->
-<!-- 3. Segundo parcial: 10 de noviembre de 2022 -->
+1. Primer parcial: 27 de abril de 2023
+1. Segundo parcial: 08 de junio de 2023
 
 <!-- ## Alumnos -->
 

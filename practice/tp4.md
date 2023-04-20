@@ -25,7 +25,6 @@ Luego, correr `./gradlew build` o dar `Reload projects` desde el gradle menu en 
   * Debe utilizar una LinkedList para su representación
   * Debe ser Iterable
   * Debe considerar y detectar el Underflow
-  * Debe soportar dos constructores
 
 ## Ejercicio 2
 
@@ -33,7 +32,6 @@ Luego, correr `./gradlew build` o dar `Reload projects` desde el gradle menu en 
   * Debe utilizar una LinkedList para su representación
   * Debe ser Iterable
   * Debe considerar y detectar el Underflow
-  * Debe soportar dos constructores
 
   
 

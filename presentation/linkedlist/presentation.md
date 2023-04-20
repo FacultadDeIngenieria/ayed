@@ -24,10 +24,10 @@ class: center, middle, inverse
 * **Definition:** A *linked list* is a recursive data structure that is either empty (*null*) or a reference to a node having a generic item and a reference to a linked list.
 
 ```java
-private class Node<Item>
+private class Node<E>
 {
-  Item item;
-  Node<Item> next; 
+  E item;
+  Node<E> next; 
 }
 ```
 

@@ -9,6 +9,7 @@
 1. [Stack](stack)
 1. [Queue](queue)
 1. [Linked List](linkedlist)
+1. [Tree](tree)
 
 ## Trabajos Prácticos
 

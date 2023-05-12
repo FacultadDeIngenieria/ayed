@@ -16,7 +16,7 @@ public V get(K key);
     * Agregar / Modificar una entrada
 ```java
 /** Associates the specified value with the specified key in this map */
-public put(K key, V value);
+public void put(K key, V value);
 ```
     * Remover una entrada
 ```java
@@ -38,7 +38,7 @@ interface Map<K, V> {
     public V get(K key);
 
     /** Associates the specified value with the specified key in this map */
-    public put(K key, V value);
+    public void put(K key, V value);
 
     /** Removes the mapping for a key from this map if it is present */
     public remove(K key);
@@ -47,7 +47,7 @@ interface Map<K, V> {
     public Int size();
 
     /** Returns true if this map contains no key-value mappings */
-    public boolean isEmpty() { size() == 0; }
+    public boolean isEmpty() { return size() == 0; }
 
     /** Returns true if this map contains a mapping for the specified key */
     public boolean contains(K key);
@@ -56,7 +56,7 @@ interface Map<K, V> {
 
 ---
 
-# Array based implementation
+# List based implementation
 
 [java.util.List](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)
 
@@ -68,7 +68,7 @@ public class ArrayMap<K,V> implements Map<K,V> {
 
     private int size = 0;
 
-    @Override public int size() { return keys.size(); }
+    @Override public int size() { return size; }
 
     @Override public boolean contains(@NotNull K key) { 
         return indexOf(key) >= 0; 
@@ -77,7 +77,7 @@ public class ArrayMap<K,V> implements Map<K,V> {
     private int indexOf(K key) {
         for (int i = 0; i < size-1; i++)
         {
-            if(key.equals(keys.get(index))) return index;
+            if(key.equals(keys.get(i))) return index;
         }
         return -1;
     }
@@ -90,7 +90,7 @@ public class ArrayMap<K,V> implements Map<K,V> {
 
 ---
 
-# Array based implementation
+# List based implementation
 
 ```java
     @Override public V put(@NotNull K key, V value) {
@@ -106,8 +106,8 @@ public class ArrayMap<K,V> implements Map<K,V> {
         final int index = indexOf(key)
         if(index != -1) {
             for(int i = index + 1; i < size - 1; i++) {
-                keys.add(i - 1, keys.get(i));
-                values.add(i - 1, values.get(i));
+                keys.set(i - 1, keys.get(i));
+                values.set(i - 1, values.get(i));
             }
             size--;
         }
@@ -116,7 +116,7 @@ public class ArrayMap<K,V> implements Map<K,V> {
 
 ---
 
-# Array based with binary search
+# List based with binary search
 
 ```java
     private int indexOf(K key) {
@@ -137,7 +137,7 @@ public class ArrayMap<K,V> implements Map<K,V> {
 ```
 
 ---
-# Array based with binary search
+# List based with binary search
 
 ```java
     @Override public V put(@NotNull K key, V value) {
@@ -211,7 +211,7 @@ abstract class TreeMap<K, V> extends Map<K, V> {
 # Binary Search Tree
 
 ```java
-@Override public V get(K key) { return find(head, key); }
+@Override public V get(K key) { return find(head, key).value; }
 
 @Override public boolean contains(key: K) { return find(head, key) != null; }
 
@@ -231,10 +231,7 @@ private Node<K, V> find(Node<K, V> node, K key) {
 
 
 ```java
-@Override public void put(K key, V value) {
-    head = put(head, key, value)
-    return head;
-}
+@Override public void put(K key, V value) { put(head, key, value); }
 
 private Node<K, V> put(Node<K, V> node, K key, V value) {
     if (node == null) {

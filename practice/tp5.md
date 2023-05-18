@@ -14,7 +14,7 @@ Para poder llevar a cabo esta práctica, es necesario actualizar la dependencia 
 
 Para esto, en sus repositorios, en la linea 39 del file `build.gradle`, la linea debe contener:
 
-```    implementation 'ar.edu.austral.fi.algorithms:algorithms-base:1.0.3'```
+```    implementation 'ar.edu.austral.fi.algorithms:algorithms-base:1.0.4'```
 
 Luego, correr `./gradlew build` o dar `Reload projects` desde el gradle menu en sus IDEs.
 

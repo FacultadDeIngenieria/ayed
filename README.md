@@ -11,6 +11,7 @@
 1. [Linked List](linkedlist)
 1. [Tree](tree)
 1. [BST](bst)
+1. [Balanced Trees](balancedtrees)
 
 ## Trabajos Prácticos
 

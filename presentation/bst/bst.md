@@ -211,7 +211,10 @@ abstract class TreeMap<K, V> extends Map<K, V> {
 # Binary Search Tree
 
 ```java
-@Override public V get(K key) { return find(head, key).value; }
+@Override public V get(K key) {
+    final Node<K, V> node = find(root, key);
+    return node != null ? node.value : null; 
+}
 
 @Override public boolean contains(key: K) { return find(head, key) != null; }
 
@@ -231,7 +234,7 @@ private Node<K, V> find(Node<K, V> node, K key) {
 
 
 ```java
-@Override public void put(K key, V value) { put(head, key, value); }
+@Override public void put(K key, V value) { head = put(head, key, value); }
 
 private Node<K, V> put(Node<K, V> node, K key, V value) {
     if (node == null) {
@@ -271,8 +274,6 @@ private Node<K, V> remove(Node<K, V> node, K key) {
         node.right = remove(node.right, key);
         return node;
     } else {
-        size--;
-        
         if(node.left == null) return node.right;
         else if (node.right == null) return node.left;
         else {
@@ -282,6 +283,8 @@ private Node<K, V> remove(Node<K, V> node, K key) {
             node.value = next.value;
             next.key = key;
             node.right = remove(node.right, key);
+            size--;
+            
             return node;
 
         }

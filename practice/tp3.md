@@ -27,6 +27,7 @@ Luego, correr `./gradlew build` o dar `Reload projects` desde el gradle menu en 
 
 * Implementar la clase algorithms.queue.ArrayQueue que implemente la interfaz algorithms.queue.Queue 
   * Debe ser Iterable
+  * Debe soportar dos constructores
   * Debe utilizar un Array para su implementación
   * Debe detectar y soportar underflow (arrojar una NoSuchElementException exception)
   

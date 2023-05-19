@@ -10,7 +10,7 @@ permalink: /practice/6
 * Entrega: 1 de Junio, 2023
 
 ## Setup
-Para poder llevar a cabo esta práctica, es necesario actualizar la dependencia `ar.edu.austral.fi.algorithms:algorithms-base` a la version `1.0.3`.
+Para poder llevar a cabo esta práctica, es necesario actualizar la dependencia `ar.edu.austral.fi.algorithms:algorithms-base` a la version `1.0.4`.
 
 Para esto, en sus repositorios, en la linea 39 del file `build.gradle`, la linea debe contener:
 

@@ -261,3 +261,137 @@ private fun randomizePut(node: Node<K, V>?, key: K, value: V): Node<K, V>? {
     }
 }
 ```
+
+---
+
+# Balancing
+
+Randomized BSTs guarantees performance in a probabilistic sense, but still admit the possibility that a particular search operation could take linear time.
+
+### Is there a type of BST for which we can guarantee that each and every insert and search operation will be logarithmic in the size of the tree?
+
+--
+
+* To guarantee that our BSTs will be balanced, we need flexibility in the tree structures that we use.
+* To get this flexibility, let us assume that the nodes in our trees can hold more than one key
+* We will allow 3-nodes and 4-nodes, which can hold two and three keys, respectively
+
+---
+
+# 2, 3, 4 Trees
+
+A 2-3-4 search tree is a tree that either is empty or comprises three types of nodes: 
+
+* **2-nodes**, with one key, a left link to a tree with smaller keys, and a right link to a tree with larger keys
+* **3-nodes**, with two keys, a left link to a tree with smaller keys, a middle link to a tree with key values between the node’s keys and a right link to a tree with larger keys
+* **4-nodes**, with three keys and four links to trees with key values defined by the ranges subtended by the node’s keys
+
+--
+
+A balanced 2-3-4 search tree is a 2-3-4 search tree with all links to empty trees at the same distance from the root.
+
+.center[![]({{site.baseurl}}/presentation/balancedtrees/234.png)]
+
+---
+
+# 2, 3, 4 Insertion
+
+.center[![]({{site.baseurl}}/presentation/balancedtrees/234-insertion-basic.png)]
+
+---
+
+# 2, 3, 4 Insertion
+
+.center[![]({{site.baseurl}}/presentation/balancedtrees/234-insertion.png)]
+
+---
+
+# 2, 3, 4 Searches
+
+### Searches in N-node 2-3-4 trees visit at most lg N + 1 nodes.
+
+Every external node is the same distance from the root: The transformations that we perform have no effect on the distance from any node to the root, except when we split the root (in this case the distance from all nodes to the root is increased by 1). If all the nodes are 2-nodes, the stated result holds, since the tree is like a full binary tree; if there are 3-nodes and 4-nodes, the height can only be lower.
+
+---
+
+# Red-Black Trees
+
+The 2-3-4 insertion algorithm is easy to understand, but implementing it directly is cumbersome because of all the different cases that can arise.
+
+### The basic idea is to represent 2-3-4 trees as standard BSTs (2-nodes only) but to add one extra bit of information per node to encode 3-nodes and 4-nodes.
+
+---
+
+# Red-Black Trees
+
+We think of the links as being of two different types: 
+* red links, which bind together small binary trees comprising 3-nodes and 4-nodes
+* black links, which bind together the 2-3-4 tree.
+
+.center[![]({{site.baseurl}}/presentation/balancedtrees/234-to-rb.png)]
+
+We represent 4-nodes as three 2-nodes connected by red links, and 3-nodes as two 2-nodes connected by a single red link. The red link in a 3-node may be a left link or a right link, so there are two ways to represent each 3-node.
+
+### In any tree, each node is pointed to by one link, so coloring the links is equivalent to coloring the nodes.
+
+---
+
+# Red-Black Trees
+
+.center[![]({{site.baseurl}}/presentation/balancedtrees/rb.png)]
+
+Any path from the root to an external node in this tree has three black links
+
+--
+
+### Properties
+
+1. Any path from the root to an external node in this tree has three black links
+2. They correspond directly to 2-3-4 trees, so we can implement the balanced 2-3-4 tree algorithm by maintaining the correspondence
+
+We get the best of both worlds: the simple search method from the standard BST and the simple insertion–balancing method from the 2-3-4 search tree.
+
+---
+
+# Red-Black Trees
+
+### Search overhead
+
+The search method never examines the field that represents node color, so the balancing mechanism adds no overhead to the time taken by the fundamental search procedure. 
+
+--
+
+### Insertion overhead
+
+The overhead for insertion is small: we have to take action for balancing only when we see 4-nodes. If a node has two red children, it is a part of a 4-node.
+
+---
+
+# Red-Black Trees
+
+### Splitting
+
+.center[![]({{site.baseurl}}/presentation/balancedtrees/rb-splitting.png)]
+
+
+---
+
+# Red-Black Trees
+
+### Insertion
+
+.center[![]({{site.baseurl}}/presentation/balancedtrees/rb-insertion.png)]
+
+---
+
+# Red-Black Trees
+
+### Insertion with rotation
+
+.center[![]({{site.baseurl}}/presentation/balancedtrees/rb-insertion-rotation.png)]
+
+---
+
+# Red-Black Trees
+
+.center[![]({{site.baseurl}}/presentation/balancedtrees/rb-construction.png)]

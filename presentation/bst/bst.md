@@ -21,7 +21,7 @@ public void put(K key, V value);
     * Remover una entrada
 ```java
 /** Removes the mapping for a key from this map if it is present */
-public remove(K key);
+public void remove(K key);
 ```
 
 ---
@@ -41,7 +41,7 @@ interface Map<K, V> {
     public void put(K key, V value);
 
     /** Removes the mapping for a key from this map if it is present */
-    public remove(K key);
+    public void remove(K key);
 
     /** Returns the number of key-value mappings in this map */
     public Int size();

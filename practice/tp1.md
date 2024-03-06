@@ -6,7 +6,7 @@ permalink: /practice/1
 
 # Práctica 1 (Opcional): Complejidad de Algoritmos
 
-* Fecha: 2 de Marzo, 2023
+* Fecha: 7 de Marzo, 2024
 
 ## Ejercicio 1
 

@@ -53,7 +53,7 @@
 
 ## Cátedra
 
-<!-- [Link de Discord para consulta martes de 18.30 a 19.30](https://discord.gg/qKMJTMqGt3) -->
+[Link de Discord para consulta](https://discord.gg/qKMJTMqGt3)
 
 * Emilio López Gabeiras
 * Pedro Colunga: [pedro.colunga@ing.austral.edu.ar](mailto:pedro.colunga@ing.austral.edu.ar)

@@ -312,4 +312,3 @@ public class WeightedQuickUnionUF
 
 .center[![]({{site.baseurl}}/presentation/unionfind/perf_table.png)]
  
----

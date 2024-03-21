@@ -33,15 +33,15 @@
 6. Como resultado de las prácticas se calculará una nota de práctica que será parte de la nota de cursada.
 
 
-<!-- ## Links -->
+## Links
 
-<!-- 1. [A Tale of Three Trees by Scott Chacon](https://www.infoq.com/presentations/A-Tale-of-Three-Trees/) -->
+1. [A Tale of Three Trees by Scott Chacon](https://www.infoq.com/presentations/A-Tale-of-Three-Trees/)
 
-<!-- ## Parciales -->
+## Parciales
 
 <!-- 1. [Examen Nivelador](https://forms.gle/C69Vex6gG9Hch7XG8)  -->
-<!-- 1. Primer parcial: 27 de abril de 2023 -->
-<!-- 1. Segundo parcial: 08 de junio de 2023 -->
+1. Primer parcial: 2 de mayo de 2024
+1. Segundo parcial: 6 de junio de 2024
 
 ## Alumnos
 

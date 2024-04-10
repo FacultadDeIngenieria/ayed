@@ -7,7 +7,7 @@
 1. [Introducción al Análisis de Algoritmos](introduction)
 1. [Caso de estudio: Union-Find](unionfind)
 1. [Stack](stack)
-<!-- 1. [Queue](queue) -->
+1. [Queue](queue)
 <!-- 1. [Linked List](linkedlist) -->
 <!-- 1. [Tree](tree) -->
 <!-- 1. [BST](bst) -->

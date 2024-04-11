@@ -33,7 +33,34 @@ class: center, middle, inverse
 
 # Generic ADT Queue Interface
 
-.center[![]({{site.baseurl}}/presentation/queue/queue_interface.png)]
+```java
+public interface Queue<E> extends Iterable<E> {
+    /**
+     * Adds a new item to this queue.
+     * @param  item the item to add
+     */
+    void enqueue(@NotNull E item);
+
+    /**
+     * Removes and returns the item on this queue that was least recently added.
+     * @return the item on this queue that was least recently added
+     * @throws NoSuchElementException if this queue is empty
+     */
+    @NotNull E dequeue();
+
+    /**
+     * Returns true if this queue is empty.
+     * @return {@code true} if this queue is empty; {@code false} otherwise
+     */
+    boolean isEmpty();
+
+    /**
+     * Returns the number of items in the queue
+     * @return  size
+     */
+    int size();
+}
+```
 
 ---
 
@@ -56,3 +83,9 @@ class: center, middle, inverse
 .center[![]({{site.baseurl}}/presentation/queue/queue_resizing_array.png)]
 
 * **Q.** How to resize?
+
+---
+
+# Queue: resizing-array trace
+
+.center[![]({{site.baseurl}}/presentation/queue/resizing_array_queue_test.png)]

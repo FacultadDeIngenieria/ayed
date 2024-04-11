@@ -112,7 +112,34 @@ class: center, middle, inverse
 
 # Generic ADT Stack Interface
 
-.center[![]({{site.baseurl}}/presentation/stack/stack_interface.png)]
+```java
+public interface Stack<E> {
+    /**
+     * Adds a new item to the Stack
+     * @param  item to be pushed in the stack
+     */
+    void push(@NotNull final E item);
+
+    /**
+     * Remove and return the item most recently added
+     * @return  item
+     */
+    E pop();
+
+    /**
+     * Returns true if the stack has no items
+     * @return  true or false
+     */
+    boolean isEmpty();
+
+    /**
+     * Returns the number of items in the stack
+     * @return  size
+     */
+    int size();
+}
+
+```
 
 ---
 
@@ -122,20 +149,44 @@ class: center, middle, inverse
   * Fixed-capacity stack: array implementation
   * linked-list implementation (we will cover this one in future lessons) 
 
-* Use array s[] to store N items on stack.
-  * `push()`: add new item at s[N].
-  * `pop()`: remove item from s[N-1]
+* Use array s[] to store n items on stack.
+  * `push()`: add new item at s[n].
+  * `pop()`: remove item from s[n-1]
 
 .center[![]({{site.baseurl}}/presentation/stack/array_stack.png)]
 
-* **Defect.** Stack overflows when N exceeds capacity. *[stay tuned]*
+* **Defect.** Stack overflows when n exceeds capacity. *[stay tuned]*
 
 ---
 
 # <Item> Stack Implementation
 
-.center[![]({{site.baseurl}}/presentation/stack/stack_of_strings.png)]
+```java
+public class FixedCapacityStack<E>
+{
+  private E[] a; // stack entries
+  private int n; // size
 
+  public FixedCapacityStack(int cap)
+  { 
+    a = (E[]) new Object [cap]; 
+  }
+
+  public boolean isEmpty() { return n == 0; }
+  
+  public int size() { return n; }
+  
+  public void push(E item)
+  { 
+    a[n++] = item; 
+  }
+  
+  public E pop() { 
+    return a[--n]; 
+  }  
+}
+
+```
 ---
 
 # Stack considerations
@@ -149,17 +200,17 @@ class: center, middle, inverse
 * **Loitering.** Holding a reference to an object when it is no longer needed. 
 
 ```java
-  public Item pop() 
+  public E pop() 
   { 
-    return a[--N]; 
+    return a[--n]; 
   }
 
 vs
 
-  public Item pop() 
+  public E pop() 
   { 
-    Item item = a[--N];
-    a[N] = null;
+    E item = a[--n];
+    a[n] = null;
     return item; 
   }
 ```
@@ -177,9 +228,9 @@ vs
 
 * **Too expensive.**
   * Need to copy all items to a new array, for each operation.
-  * Array accesses to insert first N items = N + (2 + 4 + ... + 2(N – 1)) ~ N^2.
-  * **N:** 1 array access per push
-  * **2(N – 1):** array accesses to expand to size N (ignoring cost to create new array)
+  * Array accesses to insert first n items = n + (2 + 4 + ... + 2(n – 1)) ~ n^2.
+  * **n:** 1 array access per push
+  * **2(n – 1):** array accesses to expand to size n (ignoring cost to create new array)
 
 * **Challenge.** Ensure that array resizing happens infrequently
 
@@ -192,23 +243,23 @@ vs
 
 ```java
 private void resize(int max)
-{ // Move stack of size N <= max to a new array of size max.
-  Item[] temp = (Item[]) new Object[max];
-  for (int i = 0; i < N; i++)
+{ // Move stack of size n <= max to a new array of size max.
+  E[] temp = (E[]) new Object[max];
+  for (int i = 0; i < n; i++)
     temp[i] = a[i];
   a = temp;
 }
 
-public void push(Item item)
+public void push(E item)
 {  // Add item to top of stack.
-  if (N == a.length) resize(2*a.length);
-  a[N++] = item;
+  if (n == a.length) resize(2*a.length);
+  a[n++] = item;
 }
 ```
 
-* **Array accesses to insert first N = 2^i items.** N + (2 + 4 + 8 + … + N) ~ 3N.
-  * N: 1 array access per push
-  * (2 + 4 + 8 + … + N): k array accesses to double to size k (ignoring cost to create new array)
+* **Array accesses to insert first n = 2^i items.** n + (2 + 4 + 8 + … + n) ~ 3n.
+  * n: 1 array access per push
+  * (2 + 4 + 8 + … + n): k array accesses to double to size k (ignoring cost to create new array)
 
 ---
 
@@ -221,7 +272,7 @@ public void push(Item item)
 
 * **Too expensive in worst case.**
  * Consider push - pop - push - pop - ... sequence when array is full
- * Each operation takes time proportional to N.
+ * Each operation takes time proportional to n.
 
 .center[![]({{site.baseurl}}/presentation/stack/shrink_array.png)]
 
@@ -235,11 +286,11 @@ public void push(Item item)
   * `pop()`: halve size of array s[] when array is *one-quarter full*
 
 ```java
-public Item pop()
+public E pop()
 { // Remove item from top of stack.
-  Item item = a[--N];
-  a[N] = null;  // Avoid loitering.
-  if (N > 0 && N == a.length / 4) resize(a.length / 2);
+  E item = a[--n];
+  a[n] = null;  // Avoid loitering.
+  if (n > 0 && n == a.length / 4) resize(a.length / 2);
   return item;
 }
 ```
@@ -271,9 +322,9 @@ public Item pop()
 * **A.** Has a method that returns an `Iterator`
 
 ```java
-public interface Iterable<Item>
+public interface Iterable<E>
 {
-  Iterator<Item> iterator();
+  Iterator<E> iterator();
 }
 ```
 
@@ -281,10 +332,10 @@ public interface Iterable<Item>
 * **A.** Has methods `hasNext()` and `next()`
 
 ```java
-public interface Iterator<Item>
+public interface Iterator<E>
 {
   boolean hasNext();
-  Item next();
+  E next();
   void remove(); //optional; use at your own risk
 }
 ```
@@ -298,15 +349,15 @@ public interface Iterator<Item>
 
 ```java
 //shorthand
-for (Item i : stack)
- System.out.println(i);
+for (E e : stack)
+ System.out.println(e);
 ```
 ```java
 //longhand
-Iterator<Item> i = stack.iterator();
+Iterator<E> i = stack.iterator();
 while (i.hasNext())
 {
-  Item i = i.next();
+  E e = i.next();
   System.out.println(i);
 }
 ```
@@ -318,16 +369,16 @@ while (i.hasNext())
 ```java
 import java.util.Iterator;
 
-public class Stack<Item> implements Iterable<Item>
+public class Stack<E> implements Iterable<E>
 {
   ...
-  public Iterator<Item> iterator() { return new ReverseArrayIterator(); }
+  public Iterator<E> iterator() { return new ReverseArrayIterator(); }
  
-  private class ReverseArrayIterator implements Iterator<Item>
+  private class ReverseArrayIterator implements Iterator<E>
   {
-    private int i = N;
+    private int i = n;
     public boolean hasNext() { return i > 0; }
-    public Item next() { return s[--i]; }
+    public E next() { return s[--i]; }
     public void remove() { /* not supported */ }
   }
 }
@@ -341,7 +392,7 @@ public class Stack<Item> implements Iterable<Item>
 * **A.** A fail-fast iterator throws a `java.util.ConcurrentModificationException`.
 
 ```java
-for (Item i : stack)
+for (E e : stack)
   stack.push(i);
 ```
 

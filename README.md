@@ -18,7 +18,7 @@
 
 1. [TP1](practice/1)
 2. [TP2](practice/2)
-<!-- 3. [TP3](practice/3) -->
+3. [TP3](practice/3)
 <!-- 4. [TP4](practice/4) --> 
 <!-- 5. [TP5](practice/5) --> 
 <!-- 6. [TP6](practice/6) --> 
@@ -43,13 +43,13 @@
 1. Primer parcial: 2 de mayo de 2024
 1. Segundo parcial: 6 de junio de 2024
 
-## Alumnos
+<!-- ## Alumnos -->
 
-1. [Spreadsheet](https://docs.google.com/spreadsheets/d/1fbBcsMlo_-jrtR63DZ4yoNSHmgeZzuc3L9CcDX2SOSc/edit?usp=sharing)
+<!-- 1. [Spreadsheet](https://docs.google.com/spreadsheets/d/1fbBcsMlo_-jrtR63DZ4yoNSHmgeZzuc3L9CcDX2SOSc/edit?usp=sharing) -->
 
-<!-- ## TeamCity -->
+## TeamCity
 
-<!-- [Link](http://35.85.129.238:443) -->
+[Link](http://3.224.37.235:443/)
 
 ## Cátedra
 

@@ -122,3 +122,21 @@ for (Node x = first; x != null; x = x.next)
   // Process x.item.
 }
 ```
+
+---
+
+# In defense of linked lists
+
+* Educational
+* Triviality
+* Recursive
+* Augmentable: 
+  * double it! (go back)
+  * skip it! (go far)
+  * multiply it! (unrolled)
+  * embed it! (link things)
+* Composable:
+  * join
+  * split
+
+Based on http://antirez.com/news/138

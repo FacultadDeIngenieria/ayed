@@ -82,7 +82,7 @@ private class Node<E>
 * How do we add a node to the end of a linked list? 
   * To do so, we need a link to the last node in the list
 * Maintaining an extra link is not something that should be taken lightly in linked-list code
-  * every method that modifies the list needs code to check whether that variable needs to be modifie
+  * every method that modifies the list needs code to check whether that variable needs to be modified
 
 .center[![]({{site.baseurl}}/presentation/linkedlist/linked-list-insert-end.png)]
 

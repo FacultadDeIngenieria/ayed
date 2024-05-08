@@ -193,13 +193,21 @@ void traverse() {
 * We use an stack
 * For simplicity, we begin by considering an abstract stack
   * holds items or trees
-  * initialized with the tree to be treversed
+  * initialized with the tree to be traversed
 * We enter into a loop, where we pop and process the top entry on the stack, continuing until the stack is empty
   * If the popped entity is an item, we visit it;
   * if the popped entity is a tree, then we perform a sequence of push operations that depends on the desired ordering:
   * For *preorder*, we push the right subtree, then the left subtree, and then the node.
   * For *inorder*, we push the right subtree, then the node, and then the left subtree.
   * For *postorder*, we push the node, then the right subtree, and then the left subtree.
+
+---
+
+# Nonrecursive tree traversal
+
+* Consider the following example Binary Tree
+
+.center[![]({{site.baseurl}}/presentation/tree/binary_tree_example.png)]
 
 ---
 

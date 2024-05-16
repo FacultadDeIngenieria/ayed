@@ -77,7 +77,7 @@ public class ArrayMap<K,V> implements Map<K,V> {
     private int indexOf(K key) {
         for (int i = 0; i < size-1; i++)
         {
-            if(key.equals(keys.get(i))) return index;
+            if(key.equals(keys.get(i))) return i;
         }
         return -1;
     }
@@ -187,9 +187,9 @@ public class ArrayMap<K,V> implements Map<K,V> {
 /**
  * Tree map
  */
-abstract class TreeMap<K, V> extends Map<K, V> {
+abstract class TreeMap<K, V> implements Map<K, V> {
 
-    @Nullable protected Node<K, V> head = null;
+    @Nullable protected Node<K, V> root = null;
     protected int size = 0;
 
     @Override public int size() { return size; }
@@ -216,7 +216,7 @@ abstract class TreeMap<K, V> extends Map<K, V> {
     return node != null ? node.value : null; 
 }
 
-@Override public boolean contains(key: K) { return find(head, key) != null; }
+@Override public boolean contains(key: K) { return find(root, key) != null; }
 
 private Node<K, V> find(Node<K, V> node, K key) {
     if(node == null) return null;
@@ -234,7 +234,7 @@ private Node<K, V> find(Node<K, V> node, K key) {
 
 
 ```java
-@Override public void put(K key, V value) { head = put(head, key, value); }
+@Override public void put(K key, V value) { root = put(root, key, value); }
 
 private Node<K, V> put(Node<K, V> node, K key, V value) {
     if (node == null) {
@@ -259,7 +259,7 @@ private Node<K, V> put(Node<K, V> node, K key, V value) {
 
 ```java
 @Override public void remove(K key) {
-    head = remove(head, key);
+    root = remove(root, key);
 }
 
 private Node<K, V> remove(Node<K, V> node, K key) {

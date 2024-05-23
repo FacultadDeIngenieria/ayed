@@ -6,18 +6,8 @@ permalink: /practice/7
 
 # Práctica 7: Randomized BST
 
-* Fecha: 18 de mayo, 2023
-* Entrega: 1 de Junio, 2023
-
-## Setup
-Para poder llevar a cabo esta práctica, es necesario actualizar la dependencia `ar.edu.austral.fi.algorithms:algorithms-base` a la version `1.0.4`.
-
-Para esto, en sus repositorios, en la linea 39 del file `build.gradle`, la linea debe contener:
-
-```    implementation 'ar.edu.austral.fi.algorithms:algorithms-base:1.0.4'```
-
-Luego, correr `./gradlew build` o dar `Reload projects` desde el gradle menu en sus IDEs.
-
+* Fecha: 23 de mayo, 2024
+* Entrega: 31 de mayo, 2024
 
 ## Ejercicio 1
 

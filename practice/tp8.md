@@ -6,18 +6,8 @@ permalink: /practice/8
 
 # Práctica 8: Red Black Trees
 
-* Fecha: 8 de Junio, 2023
-* Entrega: 15 de Junio, 2023
-
-## Setup
-Para poder llevar a cabo esta práctica, es necesario actualizar la dependencia `ar.edu.austral.fi.algorithms:algorithms-base` a la version `1.0.5`.
-
-Para esto, en sus repositorios, en la linea 39 del file `build.gradle`, la linea debe contener:
-
-```    implementation 'ar.edu.austral.fi.algorithms:algorithms-base:1.0.5'```
-
-Luego, correr `./gradlew build` o dar `Reload projects` desde el gradle menu en sus IDEs.
-
+* Fecha: 30 de Mayo, 2024
+* Entrega: 6 de Junio, 2024
 
 ## Ejercicio 1
 

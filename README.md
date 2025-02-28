@@ -5,25 +5,25 @@
 ## Presentaciones
 
 1. [Introducción al Análisis de Algoritmos](introduction)
-1. [Caso de estudio: Union-Find](unionfind)
-1. [Stack](stack)
-1. [Queue](queue)
-1. [Linked List](linkedlist)
-1. [Tree](tree)
-1. [BST](bst)
-1. [Balanced Trees](balancedtrees)
-1. [Hash Tables](hashtables)
+<!-- 1. [Caso de estudio: Union-Find](unionfind) -->
+<!-- 1. [Stack](stack) -->
+<!-- 1. [Queue](queue) -->
+<!-- 1. [Linked List](linkedlist) -->
+<!-- 1. [Tree](tree) -->
+<!-- 1. [BST](bst) -->
+<!-- 1. [Balanced Trees](balancedtrees) -->
+<!-- 1. [Hash Tables](hashtables) -->
 
 ## Trabajos Prácticos
 
 1. [TP1](practice/1)
-2. [TP2](practice/2)
-3. [TP3](practice/3)
-4. [TP4](practice/4) 
-5. [TP5](practice/5) 
-6. [TP6](practice/6) 
-7. [TP7](practice/7)
-8. [TP8](practice/8) 
+<!-- 2. [TP2](practice/2) -->
+<!-- 3. [TP3](practice/3) -->
+<!-- 4. [TP4](practice/4)  -->
+<!-- 5. [TP5](practice/5)  -->
+<!-- 6. [TP6](practice/6)  -->
+<!-- 7. [TP7](practice/7) -->
+<!-- 8. [TP8](practice/8)  -->
 
 ## Reglas para las prácticas
 1. Todas las prácticas deben ser entregadas en su fecha de entrega, la cual se informa con la presentación del TP.
@@ -34,9 +34,9 @@
 6. Como resultado de las prácticas se calculará una nota de práctica que será parte de la nota de cursada.
 
 
-## Links
+<!-- ## Links -->
 
-1. [A Tale of Three Trees by Scott Chacon](https://www.infoq.com/presentations/A-Tale-of-Three-Trees/)
+<!-- 1. [A Tale of Three Trees by Scott Chacon](https://www.infoq.com/presentations/A-Tale-of-Three-Trees/) -->
 
 ## Parciales
 
@@ -48,13 +48,13 @@
 
 <!-- 1. [Spreadsheet](https://docs.google.com/spreadsheets/d/1fbBcsMlo_-jrtR63DZ4yoNSHmgeZzuc3L9CcDX2SOSc/edit?usp=sharing) -->
 
-## TeamCity
+<!-- ## TeamCity -->
 
-[Link](http://3.224.37.235:443/)
+<!-- [Link](http://3.224.37.235:443/) -->
 
-## Notas de las Prácticas 
+<!-- ## Notas de las Prácticas  -->
 
-[Link](https://docs.google.com/spreadsheets/d/17nbkRiuJ_VSXmryzxHN4f9wubV8z0Lh-4_nEnQLyrwY/edit?usp=sharing)
+<!-- [Link](https://docs.google.com/spreadsheets/d/17nbkRiuJ_VSXmryzxHN4f9wubV8z0Lh-4_nEnQLyrwY/edit?usp=sharing) -->
 
 ## Cátedra
 

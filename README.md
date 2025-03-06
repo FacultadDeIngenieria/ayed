@@ -41,8 +41,8 @@
 ## Parciales
 
 <!-- 1. [Examen Nivelador](https://forms.gle/C69Vex6gG9Hch7XG8)  -->
-1. Primer parcial: 2 de mayo de 2024
-1. Segundo parcial: 6 de junio de 2024
+1. Primer parcial: 8 de mayo de 2025
+1. Segundo parcial: 12 de junio de 2025
 
 <!-- ## Alumnos -->
 

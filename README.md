@@ -46,7 +46,7 @@
 
 ## Alumnos
 
-1. [Spreadsheet](https://docs.google.com/spreadsheets/d/1PUr6Ltl4q8MTtWX_cT_w8_51lgKHVeOJZpuJea5Bb3I/edit?gid=1308979833#gid=1308979833)
+1. [Spreadsheet](https://docs.google.com/spreadsheets/d/1PUr6Ltl4q8MTtWX_cT_w8_51lgKHVeOJZpuJea5Bb3I)
 
 <!-- ## TeamCity -->
 

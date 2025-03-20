@@ -200,8 +200,7 @@ public class UnionFind
   private int find(int p) // Find component name.
   {  
     int i = p;
-    while (i != id[i]) 
-      i = id[i];
+    while (i != id[i]) i = id[i];
     
     return i; 
   }

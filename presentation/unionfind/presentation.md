@@ -285,9 +285,9 @@ public class WeightedQuickUnionUF
   {
     int i = find(p);
     int j = find(q);
-    if (i == j) return; // Make smaller root point to larger one.
+    if (i == j) return; 
     
-    if (sz[i] < sz[j]) { 
+    if (sz[i] < sz[j]) { // Make smaller root point to larger one. 
       id[i] = j; 
       sz[j] = sz[j] + sz[i]; 
     } else { 

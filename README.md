@@ -44,9 +44,9 @@
 1. Primer parcial: 8 de mayo de 2025
 1. Segundo parcial: 12 de junio de 2025
 
-## Alumnos
+<!-- ## Alumnos -->
 
-1. [Spreadsheet](https://docs.google.com/spreadsheets/d/1PUr6Ltl4q8MTtWX_cT_w8_51lgKHVeOJZpuJea5Bb3I)
+<!-- 1. [Spreadsheet](https://docs.google.com/spreadsheets/d/1PUr6Ltl4q8MTtWX_cT_w8_51lgKHVeOJZpuJea5Bb3I) -->
 
 <!-- ## TeamCity -->
 

@@ -197,11 +197,13 @@ public class UnionFind
 # Quick-union: `find()` & `union()`
 
 ```java
-  private int find(int p)
-  {  // Find component name.
-    while (p != id[p]) p = id[p];
+  private int find(int p) // Find component name.
+  {  
+    int i = p;
+    while (i != id[i]) 
+      i = id[i];
     
-    return p; 
+    return i; 
   }
   
   public void union(int p, int q) // Give p and q the same root.

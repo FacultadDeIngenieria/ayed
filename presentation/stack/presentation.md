@@ -38,6 +38,53 @@ class: center, middle, inverse
 * Arithmetic expression evaluation
   * `( 1 + ( ( 2 + 3 ) * ( 4 * 5 ) ) )`
 
+???
+
+To evaluate the arithmetic expression ( 1 + ( ( 2 + 3 ) * ( 4 * 5 ) ) ) using a stack, we can use Dijkstra's Two-Stack Algorithm (also known as the Shunting Yard Algorithm for infix evaluation).
+
+Also, we can use a stack to convert from Infix to Postfix expression, and then use a stack to evaluate the postfix expression :)
+
+Steps for Evaluating an Infix Expression Using a Stack
+* Use two stacks:
+
+ * Operand stack: Stores numbers.
+
+ * Operator stack: Stores operators (+, -, *, /).
+
+* Process the expression from left to right:
+
+ * If it's a number, push it onto the operand stack.
+
+ * If it's an operator, push it onto the operator stack.
+
+ * If it's a left parenthesis ((), ignore it.
+
+ * If it's a right parenthesis ()), pop an operator and two operands, evaluate, and push the result back onto the operand stack.
+
+At the end, apply the remaining operators to the operands.
+
+Evaluation of ( 1 + ( ( 2 + 3 ) * ( 4 * 5 ) ) )
+
+|Step|Symbol|Operand|Stack|
+|---|---|---|---|---|---|
+|1|(|[]|[]|
+|2|1|[1]|[]|
+|3|+|[1]|[+]|
+|4|(|[1]|[+]|
+|5|(|[1]|[+]|
+|6|2|[1, 2]|[+]|
+|7|+|[1, 2]|[+, +]|
+|8|3|[1, 2, 3]|[+, +]|
+|9|)|[1, 5]|[+]|
+|10|* |[1, 5]|[+ , *]|
+|11|(|[1, 5]|[+ , *]|
+|12|4|[1, 5, 4]|[+ , *]|
+|13|*|[1, 5, 4]|[+ , \*, \*]|
+|14|5|[1, 5, 4, 5]|[+ , \*, \*]|
+|15|)|[1, 5, 20]|[+ , \*]|
+|16|)|[1, 100]|[+]|
+|17|)|[101]|[]|
+
 ---
 
 # Client, implementation, interface
@@ -145,7 +192,7 @@ public interface Stack<E> {
 
 # <Item> Stack Implementation
 
-* We have to implementations available:
+* We have two implementations available:
   * Fixed-capacity stack: array implementation
   * linked-list implementation (we will cover this one in future lessons) 
 

@@ -6,7 +6,7 @@
 
 1. [Introducción al Análisis de Algoritmos](introduction)
 1. [Caso de estudio: Union-Find](unionfind)
-<!-- 1. [Stack](stack) -->
+1. [Stack](stack)
 <!-- 1. [Queue](queue) -->
 <!-- 1. [Linked List](linkedlist) -->
 <!-- 1. [Tree](tree) -->
@@ -17,7 +17,7 @@
 ## Trabajos Prácticos
 
 1. [TP1](practice/1)
-<!-- 2. [TP2](practice/2) -->
+2. [TP2](practice/2)
 <!-- 3. [TP3](practice/3) -->
 <!-- 4. [TP4](practice/4)  -->
 <!-- 5. [TP5](practice/5)  -->

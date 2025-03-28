@@ -48,9 +48,9 @@
 
 <!-- 1. [Spreadsheet](https://docs.google.com/spreadsheets/d/1PUr6Ltl4q8MTtWX_cT_w8_51lgKHVeOJZpuJea5Bb3I) -->
 
-<!-- ## TeamCity -->
+## TeamCity
 
-<!-- [Link](http://3.224.37.235:443/) -->
+[Link](http://3.224.37.235:443/)
 
 <!-- ## Notas de las Prácticas  -->
 

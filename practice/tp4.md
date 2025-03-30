@@ -12,14 +12,14 @@ permalink: /practice/4
 
 ## Ejercicio 1
 
-* Implementar la clase algorithms.stack.LinkedListStack que implemente la interfaz algorithms.stack.Stack.
+* Implementar la clase `algorithms.stack.LinkedListStack` que implemente la interfaz `algorithms.stack.Stack`.
   * Debe utilizar una LinkedList para su representación
   * Debe ser Iterable
   * Debe considerar y detectar el Underflow
 
 ## Ejercicio 2
 
-* Implementar la clase algorithms.queue.LinkedListQueue que implemente la interfaz algorithms.queue.Queue.
+* Implementar la clase `algorithms.queue.LinkedListQueue` que implemente la interfaz `algorithms.queue.Queue`.
   * Debe utilizar una LinkedList para su representación
   * Debe ser Iterable
   * Debe considerar y detectar el Underflow

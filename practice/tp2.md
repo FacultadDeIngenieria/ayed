@@ -11,7 +11,7 @@ permalink: /practice/2
 
 ## Ejercicio 1
 
-* Implementar la clase `ArrayStack` que implemente la interfaz `algorithms.stack.Stack`.
+* Implementar la clase `algorithms.stack.ArrayStack` que implemente la interfaz `algorithms.stack.Stack`.
   * Debe ser Iterable
   * Debe soportar resizing
   * Debe evitar el loitering

@@ -11,7 +11,7 @@ permalink: /practice/3
 
 ## Ejercicio 1
 
-* Implementar la clase algorithms.queue.ArrayQueue que implemente la interfaz algorithms.queue.Queue 
+* Implementar la clase `algorithms.queue.ArrayQueue` que implemente la interfaz `algorithms.queue.Queue` 
   * Debe ser Iterable
   * Debe soportar dos constructores (uno con parámetro `int initialCapacity` y otro sin parámetros)
   * Debe utilizar un Array para su implementación

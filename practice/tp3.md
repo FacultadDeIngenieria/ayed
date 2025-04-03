@@ -13,6 +13,7 @@ permalink: /practice/3
 
 * Implementar la clase `algorithms.queue.ArrayQueue` que implemente la interfaz `algorithms.queue.Queue` 
   * Debe ser Iterable
+  * Debe soportar resizing
   * Debe soportar dos constructores (uno con parámetro `int initialCapacity` y otro sin parámetros)
   * Debe utilizar un Array para su implementación
   * Debe detectar y soportar underflow (arrojar una NoSuchElementException exception)

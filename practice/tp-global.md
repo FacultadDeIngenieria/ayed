@@ -6,7 +6,8 @@ permalink: /practice/global
 
 # Práctica Global: 
 
-* Entrega: Fin de cursada
+* Fecha: 10 de Abril, 2025
+* Entrega: 6 de Junio, 2025
 
 ## Ejercicio 1
 

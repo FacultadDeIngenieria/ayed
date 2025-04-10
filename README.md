@@ -8,7 +8,7 @@
 1. [Caso de estudio: Union-Find](unionfind)
 1. [Stack](stack)
 1. [Queue](queue)
-<!-- 1. [Linked List](linkedlist) -->
+1. [Linked List](linkedlist)
 <!-- 1. [Tree](tree) -->
 <!-- 1. [BST](bst) -->
 <!-- 1. [Balanced Trees](balancedtrees) -->
@@ -17,13 +17,13 @@
 ## Trabajos Prácticos
 
 1. [TP1](practice/1)
-2. [TP2](practice/2)
-3. [TP3](practice/3)
-<!-- 4. [TP4](practice/4)  -->
-<!-- 5. [TP5](practice/5)  -->
-<!-- 6. [TP6](practice/6)  -->
-<!-- 7. [TP7](practice/7) -->
-<!-- 8. [TP8](practice/8)  -->
+1. [TP2](practice/2)
+1. [TP3](practice/3)
+1. [TP4](practice/4)
+<!-- 1. [TP5](practice/5)  -->
+<!-- 1. [TP6](practice/6)  -->
+<!-- 1. [TP7](practice/7) -->
+<!-- 1. [TP8](practice/8)  -->
 
 ## Reglas para las prácticas
 1. Todas las prácticas deben ser entregadas en su fecha de entrega, la cual se informa con la presentación del TP.

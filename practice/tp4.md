@@ -24,6 +24,9 @@ permalink: /practice/4
   * Debe ser Iterable
   * Debe considerar y detectar el Underflow
 
+## Nota
+Para implementar Node pueden implementarlo como clase privada dentro de `algorithms.queue.LinkedListQueue` y `algorithms.stack.LinkedListStack`, o bien crearlo en `algorithms.list.Node` y utilizar el mismo nodo en ambas clases.
+
   
 
 

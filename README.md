@@ -52,9 +52,9 @@
 
 [Link](http://3.224.37.235:443/)
 
-<!-- ## Notas de las Prácticas  -->
+## Notas de las Prácticas
 
-<!-- [Link](https://docs.google.com/spreadsheets/d/17nbkRiuJ_VSXmryzxHN4f9wubV8z0Lh-4_nEnQLyrwY/edit?usp=sharing) -->
+[Link](https://docs.google.com/spreadsheets/d/17nbkRiuJ_VSXmryzxHN4f9wubV8z0Lh-4_nEnQLyrwY/edit?usp=sharing)
 
 ## Cátedra
 

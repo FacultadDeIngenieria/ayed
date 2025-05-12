@@ -6,8 +6,8 @@ permalink: /practice/5
 
 # Práctica 5: Tree Visitor
 
-* Fecha: 9 de mayo, 2024
-* Entrega: 16 de mayo, 2024
+* Fecha: 15 de mayo, 2025
+* Entrega: 23 de mayo, 2025
 
 ## Ejercicio 1
 

@@ -22,7 +22,7 @@
 1. [TP4](practice/4)
 1. [TP5](practice/5) 
 1. [TP6](practice/6)  
-<!-- 1. [TP7](practice/7) -->
+1. [TP7](practice/7)
 <!-- 1. [TP8](practice/8)  -->
 
 ## Reglas para las prácticas

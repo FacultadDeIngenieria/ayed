@@ -300,6 +300,13 @@ A balanced 2-3-4 search tree is a 2-3-4 search tree with all links to empty tree
 
 ---
 
+# 4 Node split
+
+.center[<img src="{{site.baseurl}}/presentation/balancedtrees/234-4-split.png" width="80%">]
+
+---
+
+
 # 2, 3, 4 Insertion
 
 .center[![]({{site.baseurl}}/presentation/balancedtrees/234-insertion.png)]
@@ -311,6 +318,25 @@ A balanced 2-3-4 search tree is a 2-3-4 search tree with all links to empty tree
 ### Searches in N-node 2-3-4 trees visit at most lg N + 1 nodes.
 
 Every external node is the same distance from the root: The transformations that we perform have no effect on the distance from any node to the root, except when we split the root (in this case the distance from all nodes to the root is increased by 1). If all the nodes are 2-nodes, the stated result holds, since the tree is like a full binary tree; if there are 3-nodes and 4-nodes, the height can only be lower.
+
+---
+
+# 2, 3, 4 Use cases
+
+* **Filesystem Indexing (NTFS, ext3/4)**
+  * File metadata is stored in trees.
+  * Ensures efficient listing, creation, deletion, and search for files.
+
+
+* **Databases (PostgreSQL, SQLite)**
+  * Indexes in databases need to support fast range queries, logarithmic insert/delete, and minimized disk I/O. 
+  * B-trees generalize 2-3-4 trees by allowing nodes to hold many keys — reducing the number of disk reads. 
+  * Nodes correspond to disk blocks; fewer levels = faster access.
+
+
+* **Indexing in Large-Scale Search Engines (Elasticsearch)**
+  * Used to index tokens and documents in inverted indexes.
+  * An inverted index is the core data structure behind most full-text search engines. It maps words (terms) to the documents that contain them.
 
 ---
 
@@ -350,6 +376,16 @@ Any path from the root to an external node in this tree has three black links
 2. They correspond directly to 2-3-4 trees, so we can implement the balanced 2-3-4 tree algorithm by maintaining the correspondence
 
 We get the best of both worlds: the simple search method from the standard BST and the simple insertion–balancing method from the 2-3-4 search tree.
+
+---
+
+# Red-Black Trees equivalence to 2-3-4
+
+All Red-Black Trees have an equivalent 2-3-4 tree (and vice-versa).
+
+A straightforward way to transform a Red-Black Tree to its equivalent 2-3-4 is by drawing red links horizontally.
+
+.center[<img src="{{site.baseurl}}/presentation/balancedtrees/rb-horizontal.png" width="50%">]
 
 ---
 
@@ -394,4 +430,30 @@ The overhead for insertion is small: we have to take action for balancing only w
 
 # Red-Black Trees
 
-.center[![]({{site.baseurl}}/presentation/balancedtrees/rb-construction.png)]
+.center[<img src="{{site.baseurl}}/presentation/balancedtrees/rb-construction.png" width="23%">]
+
+---
+
+# Red-Black Trees Use cases
+
+* **Java Collections Framework**
+  * Classes like TreeMap, TreeSet, and ConcurrentSkipListMap are implemented using Red-Black Trees. 
+  * Guarantees O(log n) time for get, put, containsKey, and remove.
+
+* **Package Managers (NPM, APT)**
+  * Dependency graphs and version resolution trees. 
+  * Efficient version lookups, maintaining order for constraints like >=1.2.3 <2.0.0.
+
+* **Game Engines (Unity, Unreal)**
+  * Scene graphs, spatial partitioning, and AI decision trees. 
+  * Efficient dynamic insertion/removal of game entities.
+
+* **Financial Systems (Order Matching Engines)**
+  * Buy/sell orders must be stored in price-ordered structures. 
+  * Insertions, deletions, and best-match lookups must be quick and consistent.
+
+---
+
+# Cost summary analysis
+
+.center[![]({{site.baseurl}}/presentation/balancedtrees/cost-summary.png)]

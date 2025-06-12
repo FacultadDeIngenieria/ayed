@@ -108,6 +108,8 @@ interface Map<K, V> {
         hash = (R * hash + s.charAt(i)) % M;
 ```
 
+- R = 31, why?
+
 ---
 
 # Hashing functions: user defined types
@@ -144,7 +146,6 @@ interface Map<K, V> {
 ```java
 public class Transaction
 {
-    ...
     private final String who;
     private final Date when;
     private final double amount;
@@ -155,10 +156,11 @@ public class Transaction
         hash = 31 * hash + ((Double) amount).hashCode();
         return hash;
     }
+    public boolean equals(Transaction other) {
+        ...
+    }
 }
 ```
-
-- How the `equals()` should be?
 
 ---
 
@@ -214,5 +216,6 @@ public class Transaction
 
 # Hashing with linear probing: Analysis
 
-- **Clustering.** The average cost of linear probing depends on the way in which the entries clump together into contiguous groups of occupied table entries, called *clusters*, when they are inserted
-- 
+- **Clustering.** The average cost of linear probing depends on the way in which the entries clump together into contiguous groups of occupied table entries, called *clusters*, when they are inserted.
+- **Delete.** Setting the key’s table position to `null` will not work. Why?
+    - We need to reinsert into the table all of the keys in the cluster to the right of the deleted key.

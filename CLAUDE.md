@@ -73,7 +73,7 @@ The site uses three distinct Jekyll layouts in `_layouts/`:
      layout: remark
      permalink: /topicname
      ---
-     {% include_relative presentation.md %}
+     ... include_relative presentation.md ...
      ```
    - `presentation.md` with Remark.js formatted slides
 3. Add images to the same folder

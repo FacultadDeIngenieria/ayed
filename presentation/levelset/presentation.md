@@ -53,14 +53,12 @@ class: center, middle, inverse
 
 ## Waterfall (Cascada)
 * Secuencial, cada fase debe completarse antes de la siguiente
-* Documentación exhaustiva
-* Poco flexible ante cambios
+* Documentación exhaustiva, poco flexible ante cambios
 
 ## Agile
 * Iterativo e incremental
 * Entregas frecuentes y pequeñas
-* Adaptable a cambios
-* Colaboración continua con stakeholders
+* Adaptable a cambios, colaboración continua con stakeholders
 
 ## DevOps
 * Integración de desarrollo y operaciones
@@ -86,21 +84,22 @@ class: center, middle, inverse
   * Scripts de build
   * Control de versiones
 
+---
+
 ## Estructura típica en Java (nuestro proyecto):
 
 ```
-anaydis/
+algorithms-student/
 ├── src/
-│   ├── main/java/anaydis/
-│   │   ├── sort/
-│   │   ├── search/
-│   │   ├── compression/
-│   │   └── immutable/
-│   └── test/java/anaydis/
-│       ├── sort/
-│       └── search/
+│   ├── main/java/algorithms/
+│   │   ├── stack/
+│   │   ├── queue/
+│   │   └── tree/
+│   └── test/java/algorithms/
+│       ├── stack/
+│       ├── queue/
+│       └── tree/
 ├── gradle/
-├── informes/
 ├── README.md
 ├── build.gradle
 └── settings.gradle
@@ -118,220 +117,36 @@ anaydis/
   * Testing
   * Packaging
 
+---
+
 ## build.gradle (nuestro proyecto):
 ```groovy
 apply plugin: 'idea'
 apply plugin: 'java'
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+}
+
+...
+
 repositories {
     mavenCentral()
     maven {
         url = uri("https://maven.pkg.github.com/FacultadDeIngenieria/*")
+        ...
     }
 }
 
 dependencies {
-    implementation 'ar.edu.austral.fi.anaydis:anaydis-base:1.3.14'
+    implementation 'ar.edu.austral.fi.algorithms:algorithms-base:1.0.7'
+    implementation 'org.jetbrains:annotations:22.0.0'
     testImplementation 'junit:junit:4.13'
     testImplementation 'org.assertj:assertj-core:3.20.2'
 }
 ```
-
----
-class: center, middle, inverse
-
-# IDE
-## Integrated Development Environment
-
----
-
-# ¿Qué es un IDE?
-
-* Entorno integrado que combina múltiples herramientas de desarrollo:
-  * Editor de código con syntax highlighting
-  * Compilador
-  * Debugger
-  * Refactoring tools
-  * Integración con VCS
-  * Build automation
-
-## IDEs populares para Java:
-
-* **IntelliJ IDEA** (recomendado para este curso)
-* Eclipse
-* NetBeans
-* Visual Studio Code (con extensiones)
-
----
-
-# Características clave de un IDE
-
-## Code Completion (Autocompletado)
-* Sugiere métodos, clases, variables
-* Reduce errores de tipeo
-* Aumenta productividad
-
-## Refactoring
-* Renombrar variables/métodos/clases
-* Extraer métodos
-* Mover clases
-* Cambiar signatures
-
-## Navigation
-* Ir a definición
-* Buscar usos
-* Jerarquía de clases
-* Structure view
-
-## Debugging
-* Breakpoints
-* Step through code
-* Inspect variables
-* Evaluate expressions
-
----
-
-# Shortcuts importantes (IntelliJ)
-
-| Acción | Shortcut (Mac) | Shortcut (Windows/Linux) |
-|--------|----------------|--------------------------|
-| Buscar archivo | Cmd+Shift+O | Ctrl+Shift+N |
-| Buscar en todo | Cmd+Shift+F | Ctrl+Shift+F |
-| Ir a definición | Cmd+B | Ctrl+B |
-| Refactor rename | Shift+F6 | Shift+F6 |
-| Auto-format | Cmd+Alt+L | Ctrl+Alt+L |
-| Run | Ctrl+R | Shift+F10 |
-| Debug | Ctrl+D | Shift+F9 |
-
-???
-
-Aprender shortcuts es crucial para ser productivo. Al principio cuesta pero después no podrás vivir sin ellos.
-
----
-class: center, middle, inverse
-
-# Build Systems
-
----
-
-# ¿Qué es un Build System?
-
-* Automatiza el proceso de compilación, testing y packaging
-* Gestiona dependencias
-* Ejecuta tareas en el orden correcto
-* Garantiza builds reproducibles
-
-## Beneficios:
-* **Automatización**: No hacer pasos manuales
-* **Consistencia**: Todos compilan igual
-* **Eficiencia**: Compilación incremental
-* **Integración**: Con CI/CD pipelines
-
----
-
-# Gradle
-
-* Build system moderno para JVM
-* Basado en Groovy/Kotlin DSL
-* Más flexible que Maven
-* Compilación incremental
-* Build cache
-
-## build.gradle (nuestro proyecto):
-
-```groovy
-apply plugin: 'idea'
-apply plugin: 'java'
-
-repositories {
-    mavenCentral()
-    maven {
-        url = uri("https://maven.pkg.github.com/FacultadDeIngenieria/*")
-    }
-}
-
-dependencies {
-    implementation 'ar.edu.austral.fi.anaydis:anaydis-base:1.3.14'
-    testImplementation 'junit:junit:4.13'
-}
-```
-
----
-
-# Gradle Tasks
-
-* Las tareas (tasks) son la unidad de trabajo en Gradle
-
-## Comando principal para este curso:
-
-```bash
-./gradlew clean test
-```
-
-Este comando limpia archivos compilados previos y ejecuta todos los tests.
-
-## Otras tasks útiles:
-
-```bash
-./gradlew build      # Compila y ejecuta tests
-./gradlew test       # Solo ejecuta tests
-./gradlew clean      # Limpia archivos compilados
-./gradlew check      # Ejecuta todas las verificaciones
-```
-
-**Importante**: Siempre ejecutar `./gradlew clean test` antes de hacer push para verificar que todo funciona correctamente.
-
----
-class: center, middle, inverse
-
-# Version Control System
-## VCS
-
----
-
-# ¿Por qué necesitamos VCS?
-
-* **Historial completo** de cambios
-* **Colaboración** entre múltiples desarrolladores
-* **Branches** para features/fixes independientes
-* **Rollback** a versiones anteriores
-* **Backup** distribuido del código
-* **Tracking** de quién hizo qué y cuándo
-
-## Sin VCS:
-```
-proyecto_final.java
-proyecto_final_v2.java
-proyecto_final_v2_FINAL.java
-proyecto_final_v2_FINAL_ahora_si.java
-```
-
-## Con VCS:
-```
-git log
-commit 1a2b3c4d
-commit 5e6f7g8h
-commit 9i0j1k2l
-```
-
----
-
-# Git: El estándar de facto
-
-* Sistema de control de versiones **distribuido**
-* Creado por Linus Torvalds en 2005
-* Cada desarrollador tiene una copia completa del repositorio
-* Branches son baratos y rápidos
-* Used por:
-  * Linux kernel
-  * Android
-  * Prácticamente toda la industria del software
-
-## Conceptos clave:
-* **Repository**: Base de datos de versiones
-* **Commit**: Snapshot del proyecto
-* **Branch**: Línea independiente de desarrollo
-* **Remote**: Repositorio remoto (GitHub, GitLab, etc.)
 
 ---
 class: center, middle, inverse
@@ -373,21 +188,279 @@ build/              → Output
 * **Constantes**: `UPPER_SNAKE_CASE` → `MAX_SIZE`
 * **Paquetes**: `lowercase` → `com.austral.ayed`
 
+---
+
 ## Package Structure (nuestro proyecto):
 
 ```java
-anaydis
-├── sort              → Algoritmos de ordenamiento
-├── search            → Estructuras de búsqueda
-├── compression       → Algoritmos de compresión
-├── immutable         → Estructuras inmutables
-└── string            → Búsqueda en strings
+algorithms
+├── stack             → Implementaciones de Stack
+├── queue             → Implementaciones de Queue
+└── tree              → Árboles binarios de búsqueda
 ```
+
+Cada paquete contiene múltiples implementaciones:
+* `stack/`: `ArrayStack`, `LinkedListStack`
+* `queue/`: `ArrayQueue`, `LinkedListQueue`
+* `tree/`: `BinarySearchTree`, `RedBlackBinarySearchTree`, etc.
 
 ## Benefits:
 * Código predecible
 * Fácil de entender para nuevos desarrolladores
 * Herramientas funcionan mejor
+
+---
+class: center, middle, inverse
+
+# IDE
+## Integrated Development Environment
+
+---
+
+# ¿Qué es un IDE?
+
+* Entorno integrado que combina múltiples herramientas de desarrollo:
+  * Editor de código con syntax highlighting
+  * Compilador
+  * Debugger
+  * Refactoring tools
+  * Integración con VCS
+  * Build automation
+
+## IDEs populares para Java:
+
+* **IntelliJ IDEA** (recomendado para este curso)
+* Visual Studio Code (con extensiones)
+
+---
+
+# Características clave de un IDE
+
+## Code Completion
+
+* Sugiere métodos, clases, variables mientras escribes
+* Reduce errores de tipeo
+* Aumenta productividad significativamente
+
+**Ejemplo en IntelliJ:**
+```java
+Stack<Integer> stack = new ArrayStack<>();
+stack.pu  // Ctrl + Space muestra push()
+```
+
+* Muestra la documentación del método
+* Sugiere parámetros requeridos
+* Completa imports automáticamente
+
+---
+
+# Características clave de un IDE
+
+## Refactoring
+
+* Modificar estructura del código sin cambiar comportamiento
+* El IDE actualiza todas las referencias automáticamente
+
+**Operaciones comunes:**
+* **Rename**: Renombrar variables/métodos/clases en todo el proyecto
+* **Extract Method**: Convertir código seleccionado en un método
+* **Inline**: Reemplazar llamada a método con su contenido
+* **Change Signature**: Modificar parámetros de un método
+
+**Ejemplo:**
+```java
+// Seleccionar código → Refactor → Extract Method
+if (size == array.length) {
+    resize(array.length * 2);
+}
+// → extractMethod: checkAndResize()
+```
+
+---
+
+# Características clave de un IDE
+
+## Navigation
+
+* Navegar rápidamente por el código sin usar el mouse
+
+**Funciones principales:**
+
+* **Ir a definición**: Saltar a donde se define una clase/método
+* **Buscar usos**: Ver dónde se usa una clase/método
+* **Jerarquía de clases**: Ver herencia y implementaciones
+* **Structure view**: Ver estructura de la clase actual
+* **Buscar archivo**: Abrir archivo por nombre
+
+**Ejemplo:**
+```java
+stack.push(item);  // Click derecho → "Go to Definition"
+```
+
+---
+
+# Características clave de un IDE
+
+## Debugging
+
+* Ejecutar código paso a paso para encontrar errores
+* Inspeccionar el estado del programa en tiempo real
+
+**Herramientas principales:**
+
+* **Breakpoints**: Pausar ejecución en una línea específica
+* **Step Over**: Ejecutar línea actual
+* **Step Into**: Entrar en método llamado
+* **Step Out**: Salir del método actual
+* **Evaluate Expression**: Ejecutar código Java mientras está pausado
+* **Watch variables**: Monitorear valores de variables
+
+**Uso típico:**
+1. Poner breakpoint en línea sospechosa
+2. Run en modo Debug
+3. Inspeccionar valores de variables
+4. Step through para ver flujo de ejecución
+
+---
+class: center, middle, inverse
+
+# Build Systems
+
+---
+
+# ¿Qué es un Build System?
+
+* Automatiza el proceso de compilación, testing y packaging
+* Gestiona dependencias
+* Ejecuta tareas en el orden correcto
+* Garantiza builds reproducibles
+
+## Beneficios:
+* **Automatización**: No hacer pasos manuales
+* **Consistencia**: Todos compilan igual
+* **Eficiencia**: Compilación incremental
+* **Integración**: Con CI/CD pipelines
+
+---
+
+# Gradle
+
+* Build system moderno para JVM
+* Basado en Groovy/Kotlin DSL
+* Más flexible que Maven
+* Compilación incremental
+* Build cache
+
+---
+
+```groovy
+apply plugin: 'idea'
+apply plugin: 'java'
+
+idea {
+    project {
+        languageLevel = '17'
+    }
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url = uri("https://maven.pkg.github.com/FacultadDeIngenieria/*")
+        credentials { ... }
+    }
+}
+
+dependencies {
+    implementation 'ar.edu.austral.fi.algorithms:algorithms-base:1.0.7'
+    implementation 'org.jetbrains:annotations:22.0.0'
+    testImplementation 'junit:junit:4.13'
+    testImplementation 'org.assertj:assertj-core:3.20.2'
+}
+```
+
+---
+
+# Gradle Tasks
+
+* Las tareas (tasks) son la unidad de trabajo en Gradle
+
+### Comando principal para este curso:
+
+```bash
+./gradlew clean test
+```
+
+Este comando limpia archivos compilados previos y ejecuta todos los tests.
+
+### Otras tasks útiles:
+
+```bash
+./gradlew build      # Compila y ejecuta tests
+./gradlew test       # Solo ejecuta tests
+./gradlew clean      # Limpia archivos compilados
+./gradlew check      # Ejecuta todas las verificaciones
+```
+
+**Importante**: Siempre ejecutar `./gradlew clean test` antes de hacer push para verificar que todo funciona correctamente.
+
+---
+class: center, middle, inverse
+
+# Version Control System
+## VCS
+
+---
+
+# ¿Por qué necesitamos VCS?
+
+* **Historial completo** de cambios
+* **Colaboración** entre múltiples desarrolladores
+* **Branches** para features/fixes independientes
+* **Rollback** a versiones anteriores
+* **Backup** distribuido del código
+* **Tracking** de quién hizo qué y cuándo
+
+### Sin VCS:
+```
+proyecto_final.java
+proyecto_final_v2.java
+proyecto_final_v2_FINAL.java
+proyecto_final_v2_FINAL_ahora_si.java
+```
+
+### Con VCS:
+```
+git log
+commit 1a2b3c4d
+commit 5e6f7g8h
+commit 9i0j1k2l
+```
+
+---
+
+# Git
+
+* Sistema de control de versiones **distribuido**
+* Creado por Linus Torvalds en 2005
+* Cada desarrollador tiene una copia completa del repositorio
+* Branches son baratos y rápidos
+* Used por:
+  * Linux kernel
+  * Android
+  * Prácticamente toda la industria del software
+
+## Conceptos clave:
+* **Repository**: Base de datos de versiones
+* **Commit**: Snapshot del proyecto
+* **Branch**: Línea independiente de desarrollo
+* **Remote**: Repositorio remoto (GitHub, GitLab, etc.)
 
 ---
 class: center, middle, inverse
@@ -415,30 +488,30 @@ class: center, middle, inverse
 # Unit Testing con JUnit (ejemplo del curso)
 
 ```java
-package anaydis.sort;
+package algorithms.stack;
 
 import org.junit.Test;
 
-public class TestPractice02 extends SorterTest {
+public class TestPractice02 implements StackTests {
 
-    /** Test BubbleSorter with String generator. */
     @Test
-    public void testBubbleWithStringGenerator() {
-        testSorter(createStringDataSetGenerator(),
-                   SorterType.BUBBLE, 10);
-        testSorter(createStringDataSetGenerator(),
-                   SorterType.BUBBLE, 50);
-        testSorter(createStringDataSetGenerator(),
-                   SorterType.BUBBLE, 100);
+    public void testStackSmallSize() {
+        testStackIntegers(new ArrayStack<>(), 10);
     }
 
-    /** Test InsertionSorter with Integer generator. */
     @Test
-    public void testInsertionWithIntegerGenerator() {
-        testSorter(createIntegerDataSetGenerator(),
-                   SorterType.INSERTION, 10);
-        testSorter(createIntegerDataSetGenerator(),
-                   SorterType.INSERTION, 100);
+    public void testStackLargeSize() {
+        testStackIntegers(new ArrayStack<>(), 1000);
+    }
+
+    @Test
+    public void testStackUnderflow() {
+        testUnderflow(new ArrayStack<>(5));
+    }
+
+    @Test
+    public void testIterator() {
+        testIterator(new ArrayStack<>(5));
     }
 }
 ```
@@ -519,31 +592,22 @@ class: center, middle, inverse
 
 ## 1. Nombres descriptivos
 
-❌ **Mal:**
-```java
-public void s(List<T> l, Comparator<T> c) {
-    for(int i=0; i<l.size()-1; i++) {
-        for(int j=i+1; j<l.size(); j++) {
-            if(c.compare(l.get(i), l.get(j)) > 0) {
-                swap(l, i, j);
-            }
-        }
-    }
-}
-```
-
 ✅ **Bien:**
 ```java
-public void sort(List<T> list, Comparator<T> comparator) {
-    for(int i = 0; i < list.size() - 1; i++) {
-        for(int j = i + 1; j < list.size(); j++) {
-            if(greater(comparator, list, i, j)) {
-                swap(list, i, j);
-            }
+public void push(E item) {
+    if(size == array.length) {
+        E[] copy = (E[]) new Object[array.length * 2];
+        for(int i = 0; i < size; i++) {
+            copy[i] = array[i];
         }
+        array = copy;
     }
+    array[size++] = item;
 }
 ```
+---
+
+# Best Practices: Código
 
 ## 2. Funciones pequeñas
 
@@ -557,59 +621,232 @@ public void sort(List<T> list, Comparator<T> comparator) {
 
 ## 3. DRY - Don't Repeat Yourself
 
-* No duplicar código
-* Extraer código común a métodos/clases
+* **Principio**: No duplicar código
+* Si encuentras código repetido → extraer a método/clase común
+* Facilita mantenimiento: cambio en un solo lugar
 
-## 4. SOLID Principles
-
-* **S**ingle Responsibility: Una clase, una responsabilidad
-* **O**pen/Closed: Abierto a extensión, cerrado a modificación
-* **L**iskov Substitution: Subtipos deben ser sustituibles
-* **I**nterface Segregation: Interfaces específicas
-* **D**ependency Inversion: Depender de abstracciones
-
-## 5. Fail Fast
-
-* Validar entradas temprano
-* Lanzar exceptions claras
-* No dejar el sistema en estado inconsistente
-
+**❌ Mal:**
 ```java
-public void push(T element) {
-    if (element == null) {
-        throw new IllegalArgumentException("Cannot push null");
-    }
-    // ...
+// En ArrayStack
+if (size == array.length) {
+    E[] newArray = (E[]) new Object[array.length * 2];
+    System.arraycopy(array, 0, newArray, 0, size);
+    array = newArray;
+}
+
+// En ArrayQueue - mismo código duplicado
+if (size == array.length) {
+    E[] newArray = (E[]) new Object[array.length * 2];
+    System.arraycopy(array, 0, newArray, 0, size);
+    array = newArray;
 }
 ```
 
 ---
 
-# Best Practices: Ejemplo del curso
+# Best Practices: Diseño
 
-## AbstractSorter - Herencia bien aplicada
+## 3. DRY - Don't Repeat Yourself
 
+* **Principio**: No duplicar código
+* Si encuentras código repetido → extraer a método/clase común
+* Facilita mantenimiento: cambio en un solo lugar
+
+**✅ Bien:**
 ```java
-public abstract class AbstractSorter {
-    // Métodos comunes a TODOS los sorters
-    protected <T> boolean greater(Comparator<T> comparator,
-                                  List<T> list, int i, int j) {
-        return comparator.compare(list.get(i), list.get(j)) > 0;
-    }
+// Extraer a método común
+private void resize(int capacity) {
+    E[] copy = (E[]) new Object[capacity];
+    System.arraycopy(array, 0, copy, 0, size);
+    array = copy;
+}
+```
 
-    protected <T> void swap(List<T> list, int i, int j) {
-        list.set(j, list.set(i, list.get(j)));
-    }
+---
+
+# Best Practices: Diseño
+
+## 4. SOLID Principles
+
+### Single Responsibility Principle (SRP)
+* Una clase debe tener **una única razón para cambiar**
+* Cada clase tiene una responsabilidad bien definida
+
+---
+
+# Best Practices: Diseño
+
+## 4. SOLID Principles
+
+**Ejemplo:**
+```java
+// ❌ Mal: Stack que también escribe a archivo
+public class Stack<E> {
+    public void push(E item) { ... }
+    public void saveToFile(String filename) { ... }  // No es responsabilidad del Stack
 }
 
-public class BubbleSorter extends AbstractSorter {
-    // Solo implementa el algoritmo específico
-    public <T> void sort(List<T> list, Comparator<T> comparator) {
-        // Usa greater() y swap() del padre
-        // No duplica código
+// ✅ Bien: Separar responsabilidades
+public class Stack<E> {
+    public void push(E item) { ... }
+}
+
+public class StackPersistence {
+    public void saveToFile(Stack<?> stack, String filename) { ... }
+}
+```
+
+---
+
+# Best Practices: Diseño
+
+## 4. SOLID Principles
+
+### Open/Closed Principle (OCP)
+* **Abierto para extensión, cerrado para modificación**
+* Agregar funcionalidad sin cambiar código existente
+
+**Ejemplo en nuestro proyecto:**
+```java
+// Interface permite extensión sin modificar código existente
+public interface Stack<E> {
+    void push(E item);
+    E pop();
+}
+
+// Diferentes implementaciones sin cambiar la interfaz
+public class ArrayStack<E> implements Stack<E> { ... }
+public class LinkedListStack<E> implements Stack<E> { ... }
+```
+
+---
+
+# Best Practices: Diseño
+
+## 4. SOLID Principles
+
+### Liskov Substitution Principle (LSP)
+* Los subtipos deben ser sustituibles por sus tipos base
+* `ArrayStack` y `LinkedListStack` deben comportarse igual desde la perspectiva de `Stack<E>`
+
+---
+
+# Best Practices: Diseño
+
+## 4. SOLID Principles
+
+### Interface Segregation Principle (ISP)
+* Interfaces específicas mejor que interfaces generales
+* Los clientes no deben depender de métodos que no usan
+
+---
+
+# Best Practices: Diseño
+
+## 4. SOLID Principles
+
+### Interface Segregation Principle (ISP)
+
+**✅ Bien:**
+```java
+public interface Stack<E> {
+    void push(E item);
+    E pop();
+}
+
+public interface Queue<E> {
+    void enqueue(E item);
+    E dequeue();
+}
+```
+
+???
+
+The Single Responsibility Principle (SRP) and Interface Segregation Principle (ISP) both promote low coupling and high cohesion but differ in scope. SRP dictates a class should have one reason to change (focused responsibility). ISP mandates that clients should not depend on unused methods, favoring small, specific interfaces over large ones
+
+---
+
+# Best Practices: Diseño
+
+## 4. SOLID Principles (continuación)
+
+### Dependency Inversion Principle (DIP)
+* Depender de abstracciones, no de implementaciones concretas
+* Módulos de alto nivel no deben depender de módulos de bajo nivel
+
+---
+
+### Dependency Inversion Principle (DIP)
+
+**❌ Mal:**
+```java
+public class StackProcessor {
+    private ArrayStack<Integer> stack;  // Depende de implementación concreta
+
+    public void process() {
+        stack.push(1);
     }
 }
 ```
+
+**✅ Bien:**
+```java
+public class StackProcessor {
+    private Stack<Integer> stack;  // Depende de abstracción
+
+    public StackProcessor(Stack<Integer> stack) {
+        this.stack = stack;
+    }
+
+    public void process() {
+        stack.push(1);
+    }
+}
+```
+
+---
+
+# Best Practices: Diseño
+
+## 5. Fail Fast
+
+* **Principio**: Detectar y reportar errores lo más temprano posible
+* Validar entradas en el momento que se reciben
+* Lanzar exceptions claras y descriptivas
+* No dejar el sistema en estado inconsistente
+
+
+---
+
+**Ejemplo en ArrayStack:**
+```java
+@Override
+public void push(@NotNull E item) {
+    // Fail fast: validar input inmediatamente
+    if (item == null) {
+        throw new IllegalArgumentException("Cannot push null element");
+    }
+
+    if (isFull()) {
+        resize(2 * array.length);
+    }
+    array[size++] = item;
+}
+
+@Override
+public E pop() {
+    // Fail fast: detectar underflow inmediatamente
+    if (isEmpty()) {
+        throw new NoSuchElementException("Stack is empty");
+    }
+
+    E item = array[--size];
+    array[size] = null;
+    return item;
+}
+```
+
+**Beneficios**: Errores más fáciles de debuggear, código más robusto
 
 ---
 
@@ -623,11 +860,19 @@ public class BubbleSorter extends AbstractSorter {
 * **Self-Validating**: Pass o fail, sin inspección manual
 * **Timely**: Escritos antes o junto con el código
 
+---
+
+# Best Practices: Testing
+
 ## 7. Un assert por test (idealmente)
 
 * Tests específicos
 * Mensajes de error claros
 * Fácil identificar qué falló
+
+---
+
+# Best Practices: Testing
 
 ## 8. Arrange-Act-Assert pattern
 
@@ -658,7 +903,7 @@ class: center, middle, inverse
 * Cada integración es verificada por un build automatizado
 * Detecta errores rápidamente
 
-## Flujo típico:
+### Flujo típico:
 
 1. Developer hace commit y push
 2. CI server detecta cambio
@@ -666,7 +911,7 @@ class: center, middle, inverse
 4. CI reporta resultado (✅ o ❌)
 5. Si falla, equipo lo arregla inmediatamente
 
-## Beneficios:
+### Beneficios:
 
 * Reduce integration problems
 * Feedback rápido
@@ -689,6 +934,10 @@ class: center, middle, inverse
 
 > Si el viernes siguiente a la entrega el TeamCity está en ❌ rojo,
 > se considera práctica **DESAPROBADA** (incluso si pasa a verde después).
+
+---
+
+# CI Tools
 
 ## Otros populares:
 
@@ -723,9 +972,7 @@ notify:
   - if failure: notify team (red)
 ```
 
-## Regla importante:
-
-> **Si el build está en rojo, prioridad #1 es arreglarlo**
+**Si el build está en rojo, prioridad #1 es arreglarlo**
 
 ---
 class: center, middle, inverse
@@ -791,7 +1038,7 @@ jacocoTestCoverageVerification {
 
 # Interpretando Coverage
 
-## Reporte JaCoCo:
+### Reporte:
 
 ```
 Class              Line Coverage    Branch Coverage
@@ -800,13 +1047,13 @@ Queue              87% (35/40)      75% (15/20)
 BST                78% (45/58)      65% (26/40)
 ```
 
-## ¿Qué buscar?
+### ¿Qué buscar?
 
 * **Alto coverage** (>80%) es bueno, pero no suficiente
 * **Líneas no cubiertas**: ¿Son edge cases importantes?
 * **Branches no cubiertos**: ¿Faltan tests de casos if/else?
 
-## Importante:
+### Importante:
 
 > **100% coverage no significa código perfecto**
 >
@@ -815,7 +1062,7 @@ BST                78% (45/58)      65% (26/40)
 ---
 class: center, middle, inverse
 
-# GIT en Profundidad
+# GIT
 
 ---
 
@@ -923,6 +1170,8 @@ git branch -a              # Incluye remotos
 git branch -d feature-x
 ```
 
+---
+
 ## Naming conventions:
 
 * `feature/nueva-funcionalidad`
@@ -949,18 +1198,35 @@ git merge --no-ff feature-x
 ### Fast-Forward:
 ```
 main:    A --- B
-              ↓
-feature:      C --- D
+               ↓
+feature:       C --- D
 Result:  A --- B --- C --- D (main)
 ```
+
+---
+
+# Merging
+
+* Integrar cambios de un branch a otro
+
+```bash
+# Merge simple (fast-forward)
+git checkout main
+git merge feature-x
+
+# Merge con merge commit
+git merge --no-ff feature-x
+```
+
+## Tipos de merge:
 
 ### Three-way merge:
 ```
 main:    A --- B --- E
-              ↓
-feature:      C --- D
+               ↓
+feature:       C --- D
 Result:  A --- B --- E --- M (main)
-                ↑         ↗
+               ↑         ↗
                      C --- D
 ```
 
@@ -1031,42 +1297,6 @@ git checkout -b feature-x origin/feature-x
 
 ---
 
-# Workflow típico con Git (este curso)
-
-```bash
-# 1. Clonar tu repositorio (una vez)
-git clone https://github.com/FacultadDeIngenieria/algoritmos-tunombre.git
-cd algoritmos-tunombre
-
-# 2. Hacer cambios en tu código
-# ... implementar BubbleSorter, etc ...
-
-# 3. Verificar que compila y tests pasan
-./gradlew clean test
-
-# 4. Ver qué cambió
-git status
-git diff
-
-# 5. Agregar cambios al staging
-git add src/main/java/anaydis/sort/BubbleSorter.java
-# o agregar todo:
-git add .
-
-# 6. Crear commit con mensaje descriptivo
-git commit -m "Implementar BubbleSorter"
-
-# 7. ANTES DE PUSH: Verificar nuevamente
-./gradlew clean test
-
-# 8. Push a GitHub (esto actualiza TeamCity)
-git push origin master
-
-# 9. Verificar TeamCity que el build esté ✅ verde
-```
-
----
-
 # Git Good Practices
 
 ## Commits:
@@ -1076,58 +1306,9 @@ git push origin master
   * ❌ "fix"
   * ❌ "cambios"
   * ❌ "tp2"
-  * ✅ "Implementar BubbleSorter"
-  * ✅ "Agregar tests para InsertionSorter"
-  * ✅ "Fix: Corregir comparación en SelectionSorter"
-
-## Mensajes formato:
-
-```
-<tipo>: <descripción breve>
-
-<descripción detallada (opcional)>
-
-<referencias (opcional)>
-```
-
-Ejemplo:
-```
-feat: Implementar QuickSort con median-of-three
-
-Implementa QuickSort usando estrategia median-of-three
-para selección de pivot, mejorando el caso promedio.
-
-TP4 - Ejercicio 3
-```
-
----
-
-# Git Comandos útiles
-
-```bash
-# Ver diferencias
-git diff HEAD~1 HEAD        # Último commit vs anterior
-git diff main..feature-x    # Entre branches
-
-# Deshacer cambios
-git checkout -- <file>      # Descartar cambios working dir
-git reset HEAD <file>       # Unstage archivo
-git reset --hard HEAD       # ⚠️ Descartar todo (peligroso)
-
-# Modificar último commit
-git commit --amend          # Cambiar mensaje o agregar cambios
-
-# Ver quién modificó cada línea
-git blame <file>
-
-# Buscar en historial
-git log --grep="bug"
-git log -S"función"         # Buscar cambios en código
-
-# Guardar temporalmente
-git stash                   # Guardar cambios
-git stash pop               # Recuperar cambios
-```
+  * ✅ "Implementar ArrayStack"
+  * ✅ "Agregar iterator a LinkedListQueue"
+  * ✅ "Fix: Corregir underflow en ArrayStack.pop()"
 
 ---
 
@@ -1143,54 +1324,13 @@ git stash pop               # Recuperar cambios
 6. **Push** a GitHub → esto actualiza TeamCity automáticamente
 7. Verificar que build en TeamCity esté ✅ **verde**
 
-## ⚠️ REGLAS CRÍTICAS:
+## Algunas reglas básicas:
 
-* ❌ **Si TeamCity está en rojo el viernes siguiente a la entrega → TP DESAPROBADO**
-* ❌ **NO hacer commit de archivos compilados** (`build/`, `.gradle/`, etc.)
-* ❌ **NO hacer commit de archivos de IDE** (`.idea/`, `*.iml`)
-* ✅ **SIEMPRE ejecutar `./gradlew clean test` antes de push**
-* ✅ **Verificar TeamCity después de cada push**
-* ✅ **El `.gitignore` ya está configurado correctamente**
-
----
-
-# .gitignore (nuestro proyecto)
-
-* Archivo que especifica qué archivos/directorios Git debe ignorar
-
-```bash
-# Build output
-build
-out
-target/
-bin/
-
-# IDE
-.idea/
-.vscode/
-.idea_modules/
-*.iws
-*.iml
-*.ipr
-
-# OS
-.DS_Store
-
-# Gradle
-.gradle
-gradle.properties
-
-# Libs
-libs/
-
-# History
-.history
-```
-
----
-class: center, middle, inverse
-
-# Resumen
+* ❌ NO hacer commit de archivos compilados (`build/`, `.gradle/`, etc.)
+* ❌ NO hacer commit de archivos de IDE (`.idea/`, `*.iml`)
+* ✅ SIEMPRE ejecutar `./gradlew clean test` antes de push
+* ✅ Verificar TeamCity después de cada push
+* ✅ El `.gitignore` ya está configurado correctamente, pero puede actualizarse
 
 ---
 
@@ -1207,59 +1347,3 @@ class: center, middle, inverse
 9. **Continuous Integration**: Build y tests automáticos
 10. **Coverage**: Medición de cobertura con JaCoCo
 11. **Git en profundidad**: Branches, merging, workflow
-
----
-
-# Herramientas que usaremos
-
-* **IntelliJ IDEA**: IDE
-* **Java 8+**: Lenguaje (configurado en build.gradle)
-* **Gradle**: Build system
-* **JUnit 4**: Testing framework
-* **Git**: Version control
-* **GitHub**: Remote repository (individual)
-* **TeamCity**: Continuous Integration
-* **JaCoCo**: Code coverage (opcional)
-
-## Setup inicial:
-
-1. Instalar JDK 8 o superior
-2. Instalar IntelliJ IDEA
-3. Instalar Git
-4. Configurar Git:
-   ```bash
-   git config --global user.name "Tu Nombre"
-   git config --global user.email "tu@email.austral.edu.ar"
-   ```
-5. Clonar tu repositorio personal (te será asignado)
-
----
-
-# Para la próxima clase
-
-## Leer:
-
-* Revisar la práctica asignada
-* Familiarizarse con el repositorio del curso
-
-## Preparar:
-
-* Tener instalado IntelliJ IDEA
-* Tener configurado Git
-* Haber clonado tu repositorio personal
-* Poder ejecutar `./gradlew clean test` exitosamente
-* Verificar acceso a TeamCity
-
-## Practicar:
-
-* Comandos básicos de Git (add, commit, push, status, diff)
-* Ejecutar `./gradlew clean test` y ver resultado
-* Navegar código en IntelliJ
-* Hacer un commit de prueba y verificar en TeamCity
-
----
-class: center, middle, inverse
-
-# ¿Preguntas?
-
-### pedro.colunga@ing.austral.edu.ar

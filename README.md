@@ -45,9 +45,9 @@
 1. Primer parcial: 30 de abril de 2026
 1. Segundo parcial: 11 de junio de 2026
 
-<!-- ## Alumnos -->
+## Alumnos
 
-<!-- 1. [Spreadsheet](https://docs.google.com/spreadsheets/d/1PUr6Ltl4q8MTtWX_cT_w8_51lgKHVeOJZpuJea5Bb3I) -->
+1. [Spreadsheet](https://docs.google.com/spreadsheets/d/1O0ZKBQfVtI2jfYl9JICtUZdItAQdqUdd8UIs-9ZJdA8/edit?usp=sharing)
 
 ## TeamCity
 

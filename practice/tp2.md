@@ -6,8 +6,8 @@ permalink: /practice/2
 
 # Práctica 2: Stack
 
-* Fecha: 27 de marzo, 2025
-* Entrega: 10 de abril, 2025
+* Fecha: 26 de marzo, 2026
+* Entrega: 10 de abril, 2026
 
 ## Ejercicio 1
 

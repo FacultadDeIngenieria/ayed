@@ -6,8 +6,8 @@ permalink: /practice/3
 
 # Práctica 3: Queue
 
-* Fecha: 3 de abril, 2025
-* Entrega: 11 de abril, 2025
+* Fecha: 9 de abril, 2026
+* Entrega: 17 de abril, 2026
 
 ## Ejercicio 1
 

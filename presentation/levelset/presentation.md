@@ -533,6 +533,10 @@ public class TestPractice02 implements StackTests {
 * Código más simple y enfocado
 * Menos bugs
 
+---
+
+# Test-Driven Development (TDD)
+
 ## Ejemplo:
 
 ```java
@@ -1314,7 +1318,7 @@ git checkout -b feature-x origin/feature-x
 
 # Git Workflow en este curso
 
-## Para las prácticas:
+### Para las prácticas:
 
 1. Cada alumno tiene su **repositorio personal** (ej: `algoritmos-tunombre`)
 2. **Clone** a tu máquina local
@@ -1324,7 +1328,7 @@ git checkout -b feature-x origin/feature-x
 6. **Push** a GitHub → esto actualiza TeamCity automáticamente
 7. Verificar que build en TeamCity esté ✅ **verde**
 
-## Algunas reglas básicas:
+### Algunas reglas básicas:
 
 * ❌ NO hacer commit de archivos compilados (`build/`, `.gradle/`, etc.)
 * ❌ NO hacer commit de archivos de IDE (`.idea/`, `*.iml`)

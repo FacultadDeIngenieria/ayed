@@ -9,7 +9,7 @@
 1. [Caso de estudio: Union-Find](unionfind)
 1. [Stack](stack)
 1. [Queue](queue)
-<!-- 1. [Linked List](linkedlist) -->
+1. [Linked List](linkedlist)
 <!-- 1. [Tree](tree) -->
 <!-- 1. [BST](bst) -->
 <!-- 1. [Balanced Trees](balancedtrees) -->
@@ -20,7 +20,7 @@
 <!-- 1. [TP1](practice/1) -->
 1. [TP2](practice/2)
 1. [TP3](practice/3)
-<!-- 1. [TP4](practice/4) -->
+1. [TP4](practice/4)
 <!-- 1. [TP5](practice/5)  -->
 <!-- 1. [TP6](practice/6)   -->
 <!-- 1. [TP7](practice/7) -->

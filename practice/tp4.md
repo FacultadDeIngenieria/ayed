@@ -6,8 +6,8 @@ permalink: /practice/4
 
 # Práctica 4: LinkedList
 
-* Fecha: 10 de abril, 2025
-* Entrega: 25 de abril, 2025
+* Fecha: 16 de abril, 2026
+* Entrega: 24 de abril, 2026
 
 
 ## Ejercicio 1

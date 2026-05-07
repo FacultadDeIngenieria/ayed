@@ -6,8 +6,8 @@ permalink: /practice/6
 
 # Práctica 6: Trees
 
-* Fecha: 22 de mayo, 2025
-* Entrega: 30 de mayo, 2025
+* Fecha: 7 de mayo, 2026
+* Entrega: 15 de mayo, 2026
 
 ## Ejercicio 1
 

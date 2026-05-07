@@ -93,7 +93,7 @@ public class ArrayMap<K,V> implements Map<K,V> {
 # List based implementation
 
 ```java
-    @Override public V put(@NotNull K key, V value) {
+    @Override public void put(@NotNull K key, V value) {
         final int index = indexOf(key);
         if(index == -1) {
             index = size++;
@@ -140,7 +140,7 @@ public class ArrayMap<K,V> implements Map<K,V> {
 # List based with binary search
 
 ```java
-    @Override public V put(@NotNull K key, V value) {
+    @Override public void put(@NotNull K key, V value) {
         int index = find(key, 0, size-1);
         if(index < 0) {
             index = (-index) -1
@@ -216,7 +216,7 @@ abstract class TreeMap<K, V> implements Map<K, V> {
     return node != null ? node.value : null; 
 }
 
-@Override public boolean contains(key: K) { return find(root, key) != null; }
+@Override public boolean contains(K key) { return find(root, key) != null; }
 
 private Node<K, V> find(Node<K, V> node, K key) {
     if(node == null) return null;
@@ -278,7 +278,7 @@ private Node<K, V> remove(Node<K, V> node, K key) {
         else if (node.right == null) return node.left;
         else {
             
-            Node<K, V> next = first(node.right);
+            Node<K, V> next = min(node.right);
             node.key = next.key;
             node.value = next.value;
             next.key = key;

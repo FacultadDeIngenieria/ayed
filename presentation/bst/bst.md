@@ -221,10 +221,10 @@ abstract class TreeMap<K, V> implements Map<K, V> {
 private Node<K, V> find(Node<K, V> node, K key) {
     if(node == null) return null;
     
-    int cmp = comparator.compare(key, node.key)
+    int cmp = comparator.compare(key, node.key);
     if (cmp == 0) return node;
-    else if (cmp < 0) find(node.left, key);
-    else find(node.right, key);
+    else if (cmp < 0) return find(node.left, key);
+    else return find(node.right, key);
 }
 ```
 

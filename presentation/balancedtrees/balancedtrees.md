@@ -10,6 +10,12 @@ class: center, middle, inverse
 
 .center[![]({{site.baseurl}}/presentation/balancedtrees/balanced.png)]
 
+--
+
+* A binary search tree is balanced when the distance from the root to any leaf is **guaranteed to be O(log n)**
+
+* In other words, the height of the left and right subtrees of any node differs by at most 1
+
 ???
 
 The external nodes in this BST all fall on one of two levels, and the number of comparisons for any search is the same as the number of comparisons that would be used by binary search for the same key (if the items were in an ordered array). The goal of a balanced-tree algorithm is to keep a BST as close as possible to being as well balanced as this one, while still supporting efficient dynamic insertion, deletion, and other dictionary ADT operations.

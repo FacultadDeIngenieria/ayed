@@ -6,8 +6,8 @@ permalink: /practice/7
 
 # Práctica 7: Randomized BST
 
-* Fecha: 29 de mayo, 2025
-* Entrega: 6 de junio, 2025
+* Fecha: 14 de mayo, 2026
+* Entrega: 22 de mayo, 2026
 
 ## Ejercicio 1
 

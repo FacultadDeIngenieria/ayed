@@ -44,7 +44,7 @@
 
 <!-- 1. [Examen Nivelador](https://forms.gle/C69Vex6gG9Hch7XG8)  -->
 1. Primer parcial: 30 de abril de 2026
-1. Segundo parcial: 4 de junio de 2026
+1. Segundo parcial: 11 de junio de 2026
 
 ## Alumnos
 

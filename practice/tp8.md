@@ -6,8 +6,8 @@ permalink: /practice/8
 
 # Práctica 8: Red Black Trees
 
-* Fecha: 5 de Junio, 2025
-* Entrega: 13 de Junio, 2025
+* Fecha: 21 de mayo, 2026
+* Entrega: 29 de mayo, 2026
 
 ## Ejercicio 1
 

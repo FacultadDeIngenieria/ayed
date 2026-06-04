@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" font-family="Helvetica, Arial, sans-serif" font-size="18">
+  <style>
+    .edge { stroke: #333; stroke-width: 2.5; fill: none; }
+    .node { fill: #ffffff; stroke: #1f4e79; stroke-width: 2.5; }
+    .label { fill: #1f4e79; font-weight: bold; text-anchor: middle; dominant-baseline: central; }
+    .cell { stroke: #555; stroke-width: 1.5; fill: #ffffff; }
+    .one  { fill: #d6eaf8; }
+    .header { fill: #f4f4f4; font-weight: bold; }
+    .num { text-anchor: middle; dominant-baseline: central; }
+  </style>
+  <!-- graph on the left -->
+  <line class="edge" x1="80"  y1="80"  x2="200" y2="80"/>
+  <line class="edge" x1="80"  y1="80"  x2="80"  y2="220"/>
+  <line class="edge" x1="200" y1="80"  x2="200" y2="220"/>
+  <line class="edge" x1="80"  y1="220" x2="200" y2="220"/>
+  <line class="edge" x1="80"  y1="80"  x2="200" y2="220"/>
+  <circle class="node" cx="80"  cy="80"  r="22"/><text class="label" x="80"  y="80">A</text>
+  <circle class="node" cx="200" cy="80"  r="22"/><text class="label" x="200" y="80">B</text>
+  <circle class="node" cx="80"  cy="220" r="22"/><text class="label" x="80"  y="220">C</text>
+  <circle class="node" cx="200" cy="220" r="22"/><text class="label" x="200" y="220">D</text>
+
+  <!-- matrix on the right -->
+  <g transform="translate(340, 50)">
+    <!-- column headers -->
+    <rect class="cell header" x="60"  y="0" width="60" height="40"/>
+    <rect class="cell header" x="120" y="0" width="60" height="40"/>
+    <rect class="cell header" x="180" y="0" width="60" height="40"/>
+    <rect class="cell header" x="240" y="0" width="60" height="40"/>
+    <text class="num" x="90"  y="20">A</text>
+    <text class="num" x="150" y="20">B</text>
+    <text class="num" x="210" y="20">C</text>
+    <text class="num" x="270" y="20">D</text>
+
+    <!-- row headers -->
+    <rect class="cell header" x="0" y="40"  width="60" height="50"/>
+    <rect class="cell header" x="0" y="90"  width="60" height="50"/>
+    <rect class="cell header" x="0" y="140" width="60" height="50"/>
+    <rect class="cell header" x="0" y="190" width="60" height="50"/>
+    <text class="num" x="30" y="65">A</text>
+    <text class="num" x="30" y="115">B</text>
+    <text class="num" x="30" y="165">C</text>
+    <text class="num" x="30" y="215">D</text>
+
+    <!-- row A: A-B 1, A-C 1, A-D 1 -->
+    <rect class="cell"     x="60"  y="40" width="60" height="50"/><text class="num" x="90"  y="65">0</text>
+    <rect class="cell one" x="120" y="40" width="60" height="50"/><text class="num" x="150" y="65">1</text>
+    <rect class="cell one" x="180" y="40" width="60" height="50"/><text class="num" x="210" y="65">1</text>
+    <rect class="cell one" x="240" y="40" width="60" height="50"/><text class="num" x="270" y="65">1</text>
+
+    <!-- row B: B-A 1, B-D 1 -->
+    <rect class="cell one" x="60"  y="90" width="60" height="50"/><text class="num" x="90"  y="115">1</text>
+    <rect class="cell"     x="120" y="90" width="60" height="50"/><text class="num" x="150" y="115">0</text>
+    <rect class="cell"     x="180" y="90" width="60" height="50"/><text class="num" x="210" y="115">0</text>
+    <rect class="cell one" x="240" y="90" width="60" height="50"/><text class="num" x="270" y="115">1</text>
+
+    <!-- row C: C-A 1, C-D 1 -->
+    <rect class="cell one" x="60"  y="140" width="60" height="50"/><text class="num" x="90"  y="165">1</text>
+    <rect class="cell"     x="120" y="140" width="60" height="50"/><text class="num" x="150" y="165">0</text>
+    <rect class="cell"     x="180" y="140" width="60" height="50"/><text class="num" x="210" y="165">0</text>
+    <rect class="cell one" x="240" y="140" width="60" height="50"/><text class="num" x="270" y="165">1</text>
+
+    <!-- row D: D-A 1, D-B 1, D-C 1 -->
+    <rect class="cell one" x="60"  y="190" width="60" height="50"/><text class="num" x="90"  y="215">1</text>
+    <rect class="cell one" x="120" y="190" width="60" height="50"/><text class="num" x="150" y="215">1</text>
+    <rect class="cell one" x="180" y="190" width="60" height="50"/><text class="num" x="210" y="215">1</text>
+    <rect class="cell"     x="240" y="190" width="60" height="50"/><text class="num" x="270" y="215">0</text>
+  </g>
+</svg>

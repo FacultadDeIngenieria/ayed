@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 360" font-family="Helvetica, Arial, sans-serif" font-size="18">
+  <style>
+    .edge { stroke: #333; stroke-width: 2.5; fill: none; }
+    .node { fill: #ffffff; stroke: #1f4e79; stroke-width: 2.5; }
+    .label { fill: #1f4e79; font-weight: bold; text-anchor: middle; dominant-baseline: central; }
+  </style>
+  <!-- edges -->
+  <line class="edge" x1="120" y1="80"  x2="250" y2="60"/>
+  <line class="edge" x1="120" y1="80"  x2="100" y2="200"/>
+  <line class="edge" x1="250" y1="60"  x2="380" y2="120"/>
+  <line class="edge" x1="250" y1="60"  x2="240" y2="190"/>
+  <line class="edge" x1="100" y1="200" x2="240" y2="190"/>
+  <line class="edge" x1="240" y1="190" x2="380" y2="120"/>
+  <line class="edge" x1="240" y1="190" x2="200" y2="310"/>
+  <line class="edge" x1="380" y1="120" x2="400" y2="280"/>
+  <line class="edge" x1="200" y1="310" x2="400" y2="280"/>
+  <!-- nodes -->
+  <g>
+    <circle class="node" cx="120" cy="80"  r="22"/><text class="label" x="120" y="80">A</text>
+    <circle class="node" cx="250" cy="60"  r="22"/><text class="label" x="250" y="60">B</text>
+    <circle class="node" cx="380" cy="120" r="22"/><text class="label" x="380" y="120">C</text>
+    <circle class="node" cx="100" cy="200" r="22"/><text class="label" x="100" y="200">D</text>
+    <circle class="node" cx="240" cy="190" r="22"/><text class="label" x="240" y="190">E</text>
+    <circle class="node" cx="200" cy="310" r="22"/><text class="label" x="200" y="310">F</text>
+    <circle class="node" cx="400" cy="280" r="22"/><text class="label" x="400" y="280">G</text>
+  </g>
+</svg>

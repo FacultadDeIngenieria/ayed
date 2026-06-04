@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" font-family="Helvetica, Arial, sans-serif" font-size="18">
+  <style>
+    .edge { stroke: #333; stroke-width: 2.5; fill: none; }
+    .node { fill: #ffffff; stroke: #1f4e79; stroke-width: 2.5; }
+    .label { fill: #1f4e79; font-weight: bold; text-anchor: middle; dominant-baseline: central; }
+    .weight { fill: #b00; font-weight: bold; text-anchor: middle; font-size: 16px; }
+    .wbg { fill: #fff; stroke: #b00; stroke-width: 1; }
+  </style>
+  <line class="edge" x1="100" y1="80"  x2="250" y2="60"/>
+  <line class="edge" x1="100" y1="80"  x2="120" y2="220"/>
+  <line class="edge" x1="250" y1="60"  x2="400" y2="120"/>
+  <line class="edge" x1="250" y1="60"  x2="260" y2="200"/>
+  <line class="edge" x1="120" y1="220" x2="260" y2="200"/>
+  <line class="edge" x1="260" y1="200" x2="400" y2="120"/>
+  <line class="edge" x1="260" y1="200" x2="350" y2="280"/>
+
+  <!-- weights -->
+  <g><rect class="wbg" x="158" y="55" width="34" height="22" rx="4"/><text class="weight" x="175" y="71">7</text></g>
+  <g><rect class="wbg" x="92"  y="135" width="34" height="22" rx="4"/><text class="weight" x="109" y="151">2</text></g>
+  <g><rect class="wbg" x="307" y="80" width="34" height="22" rx="4"/><text class="weight" x="324" y="96">3</text></g>
+  <g><rect class="wbg" x="240" y="120" width="34" height="22" rx="4"/><text class="weight" x="257" y="136">9</text></g>
+  <g><rect class="wbg" x="170" y="200" width="34" height="22" rx="4"/><text class="weight" x="187" y="216">4</text></g>
+  <g><rect class="wbg" x="320" y="155" width="34" height="22" rx="4"/><text class="weight" x="337" y="171">1</text></g>
+  <g><rect class="wbg" x="290" y="240" width="34" height="22" rx="4"/><text class="weight" x="307" y="256">5</text></g>
+
+  <!-- nodes -->
+  <circle class="node" cx="100" cy="80"  r="22"/><text class="label" x="100" y="80">A</text>
+  <circle class="node" cx="250" cy="60"  r="22"/><text class="label" x="250" y="60">B</text>
+  <circle class="node" cx="400" cy="120" r="22"/><text class="label" x="400" y="120">C</text>
+  <circle class="node" cx="120" cy="220" r="22"/><text class="label" x="120" y="220">D</text>
+  <circle class="node" cx="260" cy="200" r="22"/><text class="label" x="260" y="200">E</text>
+  <circle class="node" cx="350" cy="280" r="22"/><text class="label" x="350" y="280">F</text>
+</svg>

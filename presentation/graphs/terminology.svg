@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" font-family="Helvetica, Arial, sans-serif" font-size="16">
+  <style>
+    .edge { stroke: #333; stroke-width: 2.5; fill: none; }
+    .pedge { stroke: #b00; stroke-width: 4; fill: none; }
+    .node { fill: #ffffff; stroke: #1f4e79; stroke-width: 2.5; }
+    .label { fill: #1f4e79; font-weight: bold; text-anchor: middle; dominant-baseline: central; }
+    .title { fill: #333; font-size: 18px; font-weight: bold; text-anchor: middle; }
+  </style>
+  <text class="title" x="300" y="40">Path A → B → E → C (highlighted in red)</text>
+
+  <!-- non-path edges -->
+  <line class="edge" x1="120" y1="120" x2="120" y2="280"/>
+  <line class="edge" x1="120" y1="280" x2="300" y2="280"/>
+  <line class="edge" x1="480" y1="120" x2="480" y2="280"/>
+  <line class="edge" x1="300" y1="280" x2="480" y2="280"/>
+
+  <!-- path edges -->
+  <line class="pedge" x1="120" y1="120" x2="300" y2="120"/>
+  <line class="pedge" x1="300" y1="120" x2="300" y2="280"/>
+  <line class="pedge" x1="300" y1="280" x2="480" y2="120"/>
+
+  <!-- nodes -->
+  <circle class="node" cx="120" cy="120" r="26"/><text class="label" x="120" y="120">A</text>
+  <circle class="node" cx="300" cy="120" r="26"/><text class="label" x="300" y="120">B</text>
+  <circle class="node" cx="480" cy="120" r="26"/><text class="label" x="480" y="120">C</text>
+  <circle class="node" cx="120" cy="280" r="26"/><text class="label" x="120" y="280">D</text>
+  <circle class="node" cx="300" cy="280" r="26"/><text class="label" x="300" y="280">E</text>
+  <circle class="node" cx="480" cy="280" r="26"/><text class="label" x="480" y="280">F</text>
+</svg>

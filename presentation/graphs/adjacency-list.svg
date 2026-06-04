@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" font-family="Helvetica, Arial, sans-serif" font-size="18">
+  <style>
+    .edge { stroke: #333; stroke-width: 2.5; fill: none; }
+    .node { fill: #ffffff; stroke: #1f4e79; stroke-width: 2.5; }
+    .label { fill: #1f4e79; font-weight: bold; text-anchor: middle; dominant-baseline: central; }
+    .box { fill: #ffffff; stroke: #555; stroke-width: 1.5; }
+    .arrow { stroke: #333; stroke-width: 2; fill: none; }
+    .key { fill: #f4f4f4; stroke: #555; stroke-width: 1.5; }
+    .text { text-anchor: middle; dominant-baseline: central; }
+  </style>
+  <defs>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- graph -->
+  <line class="edge" x1="80"  y1="80"  x2="200" y2="80"/>
+  <line class="edge" x1="80"  y1="80"  x2="80"  y2="220"/>
+  <line class="edge" x1="200" y1="80"  x2="200" y2="220"/>
+  <line class="edge" x1="80"  y1="220" x2="200" y2="220"/>
+  <line class="edge" x1="80"  y1="80"  x2="200" y2="220"/>
+  <circle class="node" cx="80"  cy="80"  r="22"/><text class="label" x="80"  y="80">A</text>
+  <circle class="node" cx="200" cy="80"  r="22"/><text class="label" x="200" y="80">B</text>
+  <circle class="node" cx="80"  cy="220" r="22"/><text class="label" x="80"  y="220">C</text>
+  <circle class="node" cx="200" cy="220" r="22"/><text class="label" x="200" y="220">D</text>
+
+  <!-- list -->
+  <g transform="translate(330, 40)">
+    <!-- A -->
+    <rect class="key" x="0" y="0" width="40" height="40"/><text class="text" x="20" y="20">A</text>
+    <line class="arrow" x1="40" y1="20" x2="80" y2="20" marker-end="url(#arrow2)"/>
+    <rect class="box" x="80" y="0" width="50" height="40"/><text class="text" x="105" y="20">B</text>
+    <line class="arrow" x1="130" y1="20" x2="170" y2="20" marker-end="url(#arrow2)"/>
+    <rect class="box" x="170" y="0" width="50" height="40"/><text class="text" x="195" y="20">C</text>
+    <line class="arrow" x1="220" y1="20" x2="260" y2="20" marker-end="url(#arrow2)"/>
+    <rect class="box" x="260" y="0" width="50" height="40"/><text class="text" x="285" y="20">D</text>
+
+    <!-- B -->
+    <rect class="key" x="0" y="60" width="40" height="40"/><text class="text" x="20" y="80">B</text>
+    <line class="arrow" x1="40" y1="80" x2="80" y2="80" marker-end="url(#arrow2)"/>
+    <rect class="box" x="80" y="60" width="50" height="40"/><text class="text" x="105" y="80">A</text>
+    <line class="arrow" x1="130" y1="80" x2="170" y2="80" marker-end="url(#arrow2)"/>
+    <rect class="box" x="170" y="60" width="50" height="40"/><text class="text" x="195" y="80">D</text>
+
+    <!-- C -->
+    <rect class="key" x="0" y="120" width="40" height="40"/><text class="text" x="20" y="140">C</text>
+    <line class="arrow" x1="40" y1="140" x2="80" y2="140" marker-end="url(#arrow2)"/>
+    <rect class="box" x="80" y="120" width="50" height="40"/><text class="text" x="105" y="140">A</text>
+    <line class="arrow" x1="130" y1="140" x2="170" y2="140" marker-end="url(#arrow2)"/>
+    <rect class="box" x="170" y="120" width="50" height="40"/><text class="text" x="195" y="140">D</text>
+
+    <!-- D -->
+    <rect class="key" x="0" y="180" width="40" height="40"/><text class="text" x="20" y="200">D</text>
+    <line class="arrow" x1="40" y1="200" x2="80" y2="200" marker-end="url(#arrow2)"/>
+    <rect class="box" x="80" y="180" width="50" height="40"/><text class="text" x="105" y="200">A</text>
+    <line class="arrow" x1="130" y1="200" x2="170" y2="200" marker-end="url(#arrow2)"/>
+    <rect class="box" x="170" y="180" width="50" height="40"/><text class="text" x="195" y="200">B</text>
+    <line class="arrow" x1="220" y1="200" x2="260" y2="200" marker-end="url(#arrow2)"/>
+    <rect class="box" x="260" y="180" width="50" height="40"/><text class="text" x="285" y="200">C</text>
+  </g>
+</svg>

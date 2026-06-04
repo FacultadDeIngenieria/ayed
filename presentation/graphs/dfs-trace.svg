@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" font-family="Helvetica, Arial, sans-serif" font-size="16">
+  <style>
+    .edge { stroke: #ccc; stroke-width: 2.5; fill: none; }
+    .tedge { stroke: #b00; stroke-width: 3; fill: none; }
+    .node { fill: #ffffff; stroke: #1f4e79; stroke-width: 2.5; }
+    .visited { fill: #fadbd8; stroke: #b00; stroke-width: 2.5; }
+    .label { fill: #1f4e79; font-weight: bold; text-anchor: middle; dominant-baseline: central; }
+    .vlabel { fill: #b00; font-weight: bold; text-anchor: middle; dominant-baseline: central; }
+    .order { fill: #b00; font-size: 14px; font-weight: bold; text-anchor: middle; }
+    .title { fill: #333; font-weight: bold; font-size: 18px; }
+  </style>
+  <text class="title" x="20" y="30">DFS from A — visit order: A → B → C → E → D → F</text>
+
+  <!-- non-tree edges (gray) -->
+  <line class="edge" x1="120" y1="80"  x2="120" y2="200"/>
+  <line class="edge" x1="280" y1="80"  x2="280" y2="200"/>
+  <line class="edge" x1="120" y1="200" x2="280" y2="200"/>
+  <line class="edge" x1="280" y1="200" x2="440" y2="320"/>
+
+  <!-- tree edges (red) — A→B, B→C, C→E, E→D, E→F -->
+  <line class="tedge" x1="120" y1="80"  x2="280" y2="80"/>
+  <line class="tedge" x1="280" y1="80"  x2="440" y2="200"/>
+  <line class="tedge" x1="440" y1="200" x2="280" y2="200"/>
+  <line class="tedge" x1="280" y1="200" x2="120" y2="200"/>
+  <line class="tedge" x1="280" y1="200" x2="440" y2="320"/>
+
+  <!-- nodes -->
+  <circle class="visited" cx="120" cy="80"  r="24"/><text class="vlabel" x="120" y="80">A</text>
+  <text class="order" x="120" y="50">1</text>
+  <circle class="visited" cx="280" cy="80"  r="24"/><text class="vlabel" x="280" y="80">B</text>
+  <text class="order" x="280" y="50">2</text>
+  <circle class="visited" cx="440" cy="200" r="24"/><text class="vlabel" x="440" y="200">C</text>
+  <text class="order" x="475" y="200">3</text>
+  <circle class="visited" cx="280" cy="200" r="24"/><text class="vlabel" x="280" y="200">E</text>
+  <text class="order" x="280" y="170">4</text>
+  <circle class="visited" cx="120" cy="200" r="24"/><text class="vlabel" x="120" y="200">D</text>
+  <text class="order" x="85"  y="200">5</text>
+  <circle class="visited" cx="440" cy="320" r="24"/><text class="vlabel" x="440" y="320">F</text>
+  <text class="order" x="440" y="355">6</text>
+</svg>

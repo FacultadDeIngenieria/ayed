@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" font-family="Helvetica, Arial, sans-serif" font-size="18">
+  <style>
+    .edge { stroke: #333; stroke-width: 2.5; fill: none; }
+    .node { fill: #ffffff; stroke: #1f4e79; stroke-width: 2.5; }
+    .label { fill: #1f4e79; font-weight: bold; text-anchor: middle; dominant-baseline: central; }
+    .title { fill: #333; font-size: 20px; font-weight: bold; text-anchor: middle; }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Undirected -->
+  <text class="title" x="170" y="30">Undirected</text>
+  <line class="edge" x1="80"  y1="100" x2="260" y2="100"/>
+  <line class="edge" x1="80"  y1="100" x2="170" y2="240"/>
+  <line class="edge" x1="260" y1="100" x2="170" y2="240"/>
+  <circle class="node" cx="80"  cy="100" r="22"/><text class="label" x="80"  y="100">A</text>
+  <circle class="node" cx="260" cy="100" r="22"/><text class="label" x="260" y="100">B</text>
+  <circle class="node" cx="170" cy="240" r="22"/><text class="label" x="170" y="240">C</text>
+
+  <!-- Directed -->
+  <text class="title" x="530" y="30">Directed</text>
+  <line class="edge" x1="445" y1="100" x2="615" y2="100" marker-end="url(#arrow)"/>
+  <line class="edge" x1="615" y1="100" x2="535" y2="225" marker-end="url(#arrow)"/>
+  <line class="edge" x1="525" y1="240" x2="445" y2="120" marker-end="url(#arrow)"/>
+  <circle class="node" cx="440" cy="100" r="22"/><text class="label" x="440" y="100">A</text>
+  <circle class="node" cx="620" cy="100" r="22"/><text class="label" x="620" y="100">B</text>
+  <circle class="node" cx="530" cy="240" r="22"/><text class="label" x="530" y="240">C</text>
+</svg>

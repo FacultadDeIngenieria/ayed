@@ -14,6 +14,7 @@
 1. [BST](bst)
 1. [Balanced Trees](balancedtrees)
 1. [Hash Tables](hashtables)
+1. [Graphs](graphs)
 
 ## Trabajos Prácticos
 
